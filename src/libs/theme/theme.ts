@@ -25,6 +25,15 @@ export const theme = createTheme({
       black: '#141414',
     },
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 376,
+      md: 769,
+      lg: 1441,
+      xl: 1921,
+    },
+  },
 })
 
 declare module "@mui/material/styles" {

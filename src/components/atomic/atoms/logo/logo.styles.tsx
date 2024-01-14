@@ -9,6 +9,7 @@ export const LogoStyles = ():
 MuiStyles => ({
   Logo:{
     color: theme.palette.brand["50"],
+    cursor: "default",
     fontWeight: 700,
     fontSize: "32px",
     lineHeight: "110%",
