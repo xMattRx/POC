@@ -1,4 +1,3 @@
-import Button from "@/components/atomic/atoms/logo/logo"
 import styles from "@/styles/Home.module.css"
 import Head from "next/head"
 import Image from "next/image"
@@ -36,7 +35,6 @@ export default function Home() {
               />
             </a>
           </div>
-          <Button variant="primary" value="Button" type="primary" size="sm" />
         </div>
 
         <div className={styles.center}>
