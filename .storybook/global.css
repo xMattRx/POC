@@ -1,13 +1,32 @@
 @font-face {
     font-family: 'Roboto';
+    src: url('../public/fonts/Roboto-Thin.ttf') format('opentype');
+    font-weight: 100;
+  }
+@font-face {
+    font-family: 'Roboto';
+    src: url('../public/fonts/Roboto-Light.ttf') format('opentype');
+    font-weight: 300;
+  }
+@font-face {
+    font-family: 'Roboto';
     src: url('../public/fonts/Roboto-Regular.ttf') format('opentype');
     font-weight: 400;
   }
-  
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../public/fonts/Roboto-Medium.ttf') format('opentype');
+    font-weight: 500;
+  }
   @font-face {
     font-family: 'Roboto';
     src: url('../public/fonts/Roboto-Bold.ttf') format('opentype');
     font-weight: 700;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../public/fonts/Roboto-Black.ttf') format('opentype');
+    font-weight: 900;
   }
   
   h1, h2, h3, h4, h5, h6, p, a, span, sup, sub, button {

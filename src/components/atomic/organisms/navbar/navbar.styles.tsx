@@ -47,17 +47,21 @@ MuiStyles => ({
     [theme.breakpoints.up("md")]: {
       display: "flex",
       gap: "16px"
-    }
+    },
+   
   },
   Navbar__navItem:{
     alignContent: "center",
-    color: theme.palette.brand["200"],
     display: "flex",
     fontSize: "16px",
     fontWeight: "500",
     lineHeight: "24px",
     letterSpacing: "0.5px",
-    padding: "12px 8px"
+    padding: "12px 8px",
+    "& > a":{
+      color: theme.palette.brand["200"],
+      textDecoration: "none",
+    }
   },
   Navbar__actions:{
     [theme.breakpoints.up("md")]: {
@@ -78,6 +82,7 @@ MuiStyles => ({
     background:theme.palette.brand["50"],
     borderRadius: "50px",
     color: theme.palette.common.white,
+    fontSize: "14px",
     fontWeight: 500,
     lineHeight: "24px",
     letterSpacing: "0.5px",

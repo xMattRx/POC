@@ -1,33 +1,31 @@
-import { Box, Button } from "@mui/material"
-import { Logo } from "../../atoms/logo/logo"
-import { NavbarStyles } from "./navbar.styles"
-import Link from "next/link"
+import { Box, Button, Typography } from "@mui/material";
+import Link from "next/link";
+import { Logo } from "../../atoms/logo/logo";
+import { NavbarStyles } from "./navbar.styles";
 
 export function Navbar() {
-  const styles = NavbarStyles()
+  const styles = NavbarStyles();
+
   return (
     <Box sx={styles.Navbar}>
       <Box sx={styles.Navbar__content}>
         <Logo />
-        <Box
-          sx={styles.Navbar__menuHamburguer}
-          src={"./img/menu-outline.svg"}
-          component="img"
-        />
-        <Box sx={styles.Navbar__menu}>
+        <>
+          <Box
+            sx={styles.Navbar__menuHamburguer}
+            component="img"
+            src="./img/menu-outline.svg"
+            alt="Menu icon"
+          />
+        </>
+
+        <Box sx={styles.Navbar__menu} component="nav">
           <Box sx={styles.Navbar__navList} component="ul">
-            <Box sx={styles.Navbar__navItem} component="li">
-              Products
-            </Box>
-            <Box sx={styles.Navbar__navItem} component="li">
-              Solutions
-            </Box>
-            <Box sx={styles.Navbar__navItem} component="li">
-              Pricing
-            </Box>
-            <Box sx={styles.Navbar__navItem} component="li">
-              Resources
-            </Box>
+            {["Products", "Solutions", "Pricing", "Resources"].map((item, index) => (
+              <Typography key={index} sx={styles.Navbar__navItem} component="li">
+                <Link href="#">{item}</Link>
+              </Typography>
+            ))}
           </Box>
           <Box sx={styles.Navbar__actions}>
             <Link href="#">Log in</Link>
@@ -36,5 +34,5 @@ export function Navbar() {
         </Box>
       </Box>
     </Box>
-  )
+  );
 }
