@@ -8,7 +8,7 @@ export const theme = createTheme({
       50: "#7C3AED",
       100: "#4C1D95",
       200: "#0F172A",
-      300: "#044ED7",
+      300: "#A78BFA",
       400: "#9199D8",
       500: "#DAD7D6",
       600: "#F8F4F1",

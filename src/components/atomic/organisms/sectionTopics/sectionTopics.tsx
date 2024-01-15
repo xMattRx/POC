@@ -35,7 +35,7 @@ export function SectionTopics() {
   ];
 
   return (
-    <Box sx={styles.sectionTopics}>
+    <Box sx={styles.sectionTopics} component="section">
       <Box sx={styles.sectionTopics__content}>
         {topics.map((topic, index) => (
           <Topic key={index} {...topic} />

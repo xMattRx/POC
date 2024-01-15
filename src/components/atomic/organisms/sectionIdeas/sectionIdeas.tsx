@@ -7,7 +7,7 @@ export function SectionIdeas() {
   const styles = SectionIdeasStyles()
 
   return (
-    <Box sx={styles.sectionIdeas}>
+    <Box sx={styles.sectionIdeas} component="section">
       <Box sx={styles.sectionIdeas__content}>
         <Typography sx={styles.sectionIdeas__title} component="h2">
           All your ideas in one place
