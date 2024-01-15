@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/atomic/organisms/navbar/navbar"
 import { SectionIdeas } from "@/components/atomic/organisms/sectionIdeas/sectionIdeas"
+import { SectionTopics } from "@/components/atomic/organisms/sectionTopics/sectionTopics"
 import Head from "next/head"
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <SectionIdeas />
+      <SectionTopics/>
     </>
   )
 }
