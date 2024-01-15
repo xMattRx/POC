@@ -106,6 +106,7 @@ export const SectionIdeasStyles = (): MuiStyles => ({
     [theme.breakpoints.up("md")]: {
       left: "-333px",
       height: "730px",
+      top: "-229px",
       width: "793px"
     }
   },
