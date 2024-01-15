@@ -28,7 +28,7 @@ export function SectionTopics() {
     },
     {
       color: '#EDE9FE',
-      img: './img/icon.svg',
+      img: './img/aperture.svg',
       description: 'Euismod sed pellentesque ut elementum.',
       title: 'Risus morbi',
     },
