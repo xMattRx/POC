@@ -5,8 +5,8 @@ import "swiper/css/pagination"
 import "swiper/css/scrollbar"
 import { Autoplay, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { SlidesStyles } from "./slides.styles"
 import Slide from "../../molecules/slide/slide"
+import { SlidesStyles } from "./slides.styles"
 
 export default function Slides() {
   const styles = SlidesStyles()
@@ -24,17 +24,17 @@ export default function Slides() {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 3000,
+          delay: 3000
         }}
         pagination={pagination}
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]}
         className="mySwiper"
       >
         <SwiperSlide>
-          <Slide/>
+          <Slide />
         </SwiperSlide>
         <SwiperSlide>
-          <Slide/>
+          <Slide />
         </SwiperSlide>
       </Swiper>
     </Box>
