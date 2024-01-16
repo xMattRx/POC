@@ -39,7 +39,6 @@ export const SectionSimilarStyles = (): MuiStyles => ({
     color: theme.palette.brand[200],
     fontSize: "18px",
     lineHeight: "160%",
-    marginBottom: "32px",
     textAlign: "center",
   }
 })

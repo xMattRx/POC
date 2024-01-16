@@ -1,13 +1,17 @@
-import { theme } from '@/libs/theme/theme'
-import '@/styles/globals.css'
-import { CssBaseline, ThemeProvider } from '@mui/material'
-import type { AppProps } from 'next/app'
+import { theme } from "@/libs/theme/theme"
+import "@/styles/globals.css"
+import "swiper/css"
+import "swiper/css/pagination"
+import "swiper/css/navigation"
+import "swiper/css/scrollbar"
+import { CssBaseline, ThemeProvider } from "@mui/material"
+import type { AppProps } from "next/app"
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-  <ThemeProvider theme={theme}>
-    <CssBaseline />
-    <Component {...pageProps} />
-  </ThemeProvider>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Component {...pageProps} />
+    </ThemeProvider>
   )
 }

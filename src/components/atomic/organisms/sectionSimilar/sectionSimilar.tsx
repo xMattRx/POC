@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material"
 import { SectionSimilarStyles } from "./sectionSimilar.styles"
+import Slides from "../slides/slides"
 
 export function SectionSimilar() {
   const styles = SectionSimilarStyles()
@@ -16,6 +17,7 @@ export function SectionSimilar() {
           aliquam at ac est nisi, interdum etiam dignissim. Sed ut vestibulum
           eget purus ornare. Risus elit et fringilla habitant ut facilisi.
         </Typography>
+        <Slides/>
       </Box>
     </Box>
   )
