@@ -23,7 +23,7 @@ export function SectionIdeas() {
         <Box sx={styles.sectionIdeas__watchDemo}>
           <Box
             sx={styles.sectionIdeas__image}
-            src="./img/window.svg"
+            src="./img/sectionIdeas/window.svg"
             alt="window image"
             component="img"
           />
@@ -33,12 +33,12 @@ export function SectionIdeas() {
           </Button>
           <Box
             component="img"
-            src="./img/Ellipses1.svg"
+            src="./img/sectionIdeas/Ellipses1.svg"
             sx={styles.sectionIdeas__icon1}
           />
           <Box
             component="img"
-            src="./img/Ellipses2.svg"
+            src="./img/sectionIdeas/Ellipses2.svg"
             sx={styles.sectionIdeas__icon2}
           />
         </Box>
