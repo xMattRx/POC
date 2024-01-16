@@ -8,10 +8,10 @@ export function SectionTeamBrainStorming() {
   const styles = SectionTeamBrainStormingStyles()
 
   const imageBoxData = [
-    './img/Picture2.png',
-    './img/Picture3.png',
-    './img/Picture4.png',
-    './img/Picture5.png',
+    './img/sectionTeamBrainStorming/Picture2.png',
+    './img/sectionTeamBrainStorming/Picture3.png',
+    './img/sectionTeamBrainStorming/Picture4.png',
+    './img/sectionTeamBrainStorming/Picture5.png',
   ];
 
   return (

@@ -31,7 +31,7 @@ export const SectionTeamBrainStormingStyles = (): MuiStyles => ({
     }
   },
   sectionTeamBrainStorming__picture1: {
-    background: "url('./img/Picture1.png')",
+    background: "url('./img/sectionTeamBrainStorming/Picture1.png')",
     backgroundSize: "cover !important",
     height: "278px",
     width: "100%",
