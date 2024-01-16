@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react"
 import { Topic } from "./topic"
 
 const meta: Meta<typeof Topic> = {
-  title: "organisms/Topic",
+  title: "molecules/Topic",
   component: Topic,
   tags: ["autodocs"],
   parameters:{

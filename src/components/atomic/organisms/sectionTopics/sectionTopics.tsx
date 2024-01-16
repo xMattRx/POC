@@ -10,25 +10,25 @@ export function SectionTopics() {
   const topics = [
     {
       color: '#D1FAE5',
-      img: './img/attach.svg',
+      img: './img/sectionTopics/attach.svg',
       description: 'Pellentesque quis tincidunt sit sed. Tortor massa sed habitant.',
       title: 'Fermentum amet',
     },
     {
       color: '#CFFAFE',
-      img: './img/pulse.svg',
+      img: './img/sectionTopics/pulse.svg',
       description: 'Quam sed neque vitae viverra purus venenatis ac non.',
       title: 'Dignissim quam',
     },
     {
       color: '#DBEAFE',
-      img: './img/pie-chart.svg',
+      img: './img/sectionTopics/pie-chart.svg',
       description: 'Eget sed nunc, amet, nibh nulla. Morbi sed risus ullamcorper diam.',
       title: 'Dignissim quam',
     },
     {
       color: '#EDE9FE',
-      img: './img/aperture.svg',
+      img: './img/sectionTopics/aperture.svg',
       description: 'Euismod sed pellentesque ut elementum.',
       title: 'Risus morbi',
     },

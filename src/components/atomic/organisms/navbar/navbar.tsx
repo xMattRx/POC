@@ -14,7 +14,7 @@ export function Navbar() {
           <Box
             sx={styles.Navbar__menuHamburguer}
             component="img"
-            src="./img/menu-outline.svg"
+            src="./img/navbar/menu-outline.svg"
             alt="Menu icon"
           />
         </>
