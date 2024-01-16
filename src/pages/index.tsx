@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/atomic/organisms/navbar/navbar"
 import { SectionIdeas } from "@/components/atomic/organisms/sectionIdeas/sectionIdeas"
+import { SectionSimilar } from "@/components/atomic/organisms/sectionSimilar/sectionSimilar"
 import { SectionTeamBrainStorming } from "@/components/atomic/organisms/sectionTeamBrainStorming/sectionTeamBrainStorming"
 import { SectionTopics } from "@/components/atomic/organisms/sectionTopics/sectionTopics"
 import Head from "next/head"
@@ -17,6 +18,7 @@ export default function Home() {
       <SectionIdeas />
       <SectionTopics/>
       <SectionTeamBrainStorming/>
+      <SectionSimilar/>
     </>
   )
 }
