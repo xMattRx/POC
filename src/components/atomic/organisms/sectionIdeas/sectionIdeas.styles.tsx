@@ -117,6 +117,9 @@ export const SectionIdeasStyles = (): MuiStyles => ({
     top: "-48px",
     width: "256px",
     zIndex: "-1",
+    [theme.breakpoints.between(768, 1328)]: {
+      display: "none",
+    },
     [theme.breakpoints.up("md")]: {
       right: "-114px",
       top: "-137px",

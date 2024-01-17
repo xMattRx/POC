@@ -36,6 +36,15 @@ export default function Slides() {
         <SwiperSlide>
           <Slide />
         </SwiperSlide>
+        <SwiperSlide>
+          <Slide />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Slide />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Slide />
+        </SwiperSlide>
       </Swiper>
     </Box>
   )

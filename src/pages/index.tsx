@@ -3,7 +3,9 @@ import { SectionIdeas } from "@/components/atomic/organisms/sectionIdeas/section
 import { SectionSimilar } from "@/components/atomic/organisms/sectionSimilar/sectionSimilar"
 import { SectionTeamBrainStorming } from "@/components/atomic/organisms/sectionTeamBrainStorming/sectionTeamBrainStorming"
 import { SectionTopics } from "@/components/atomic/organisms/sectionTopics/sectionTopics"
+import { SectionBusiness } from "@/components/atomic/organisms/sectionBusiness/sectionBusiness"
 import Head from "next/head"
+import { SectionBusinessGallery } from "@/components/atomic/organisms/sectionBusinessGallery/sectionBusinessGallery"
 
 export default function Home() {
   return (
@@ -19,6 +21,8 @@ export default function Home() {
       <SectionTopics/>
       <SectionTeamBrainStorming/>
       <SectionSimilar/>
+      <SectionBusiness/>
+      <SectionBusinessGallery/>
     </>
   )
 }
