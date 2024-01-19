@@ -13,7 +13,7 @@ export default meta
 
 export const Default: StoryObj<typeof Topic> = {
   render: () => {
-    return <Topic color="#D1FAE5" description="Pellentesque quis tincidunt sit sed. Tortor massa sed habitant." title="Fermentum amet" img="./img/attach.svg" />
+    return <Topic color="#D1FAE5" description="Pellentesque quis tincidunt sit sed. Tortor massa sed habitant." title="Fermentum amet" img="./img/sectionTopics/attach.svg" />
   }
 }
 
