@@ -19,7 +19,18 @@ export function SectionBusiness() {
         </Box>
 
         <Box sx={styles.sectionBusiness__unlimited}>
-          <Box sx={styles.sectionBusiness__unlimitedImage}></Box>
+          <Box component="picture">
+            <Box
+              component="source"
+              media="(min-width:768px)"
+              srcSet="./img/sectionBusiness/window-desktop.png"
+            />
+            <Box
+              component="img"
+              src="./img/sectionBusiness/window-mobile.png"
+              sx={styles.sectionBusiness__unlimitedImage}
+            />
+          </Box>
           <Box sx={styles.sectionBusiness__unlimitedContent}>
             <Typography sx={styles.sectionBusiness__unlimitedTopic}>
               No limits
