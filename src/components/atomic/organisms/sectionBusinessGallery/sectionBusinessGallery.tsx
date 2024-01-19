@@ -1,5 +1,6 @@
 import { Box, Button, Typography } from "@mui/material"
 import { SectionBusinessGalleryStyles } from "./sectionBusinessGallery.styles"
+import { SectionBrainstormNow } from "../sectionBrainstormNow/sectionBrainstormNow"
 
 export function SectionBusinessGallery() {
   const styles = SectionBusinessGalleryStyles()
@@ -35,6 +36,7 @@ export function SectionBusinessGallery() {
             <Box sx={styles.sectionBusinessGallery__picture8} component="img" src="./img/sectionBusinessGallery/Picture8.png" />
           </Box>
         </Box>
+        <SectionBrainstormNow/>
       </Box>
     </Box>
   )

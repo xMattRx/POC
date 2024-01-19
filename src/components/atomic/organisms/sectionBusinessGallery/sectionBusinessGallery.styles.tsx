@@ -11,6 +11,7 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     background: "#F1F5F9",
     display: "flex",
     flexDirection: "column",
+    position: "relative",
     width: "100%"
   },
   sectionBusinessGallery__content: {
@@ -102,10 +103,10 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
   sectionBusinessGallery__gallery: {
     display: "flex",
     justifyContent: "center",
-    height: "630px",
+    height: "638px",
     width: "100%",
     [theme.breakpoints.up("md")]: {
-      height: "1201px",
+      height: "1120px",
       maxWidth: "789px",
       width: "100%",
     }
