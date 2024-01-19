@@ -63,25 +63,22 @@ export const SectionBusinessStyles = (): MuiStyles => ({
     alignItems: "center",
     display: "flex",
     flexDirection: "column",
-    gap: "48px",
+    justifyContent: "space-between",
+    flexWrap: "wrap",
     width: "100%",
     [theme.breakpoints.up("md")]: {
       flexDirection: "row"
     }
   },
   sectionBusiness__unlimitedImage: {
-    background: "url('./img/sectionBusiness/window-mobile.png')",
-    backgroundSize: "contain",
-    backgroundRepeat: "no-repeat",
     height: "311px",
     maxWidth: "360px",
     width: "100%",
     [theme.breakpoints.up("md")]: {
-      background: "url('./img/sectionBusiness/window-desktop.png')",
       backgroundSize: "contain",
       backgroundRepeat: "no-repeat",
       height: "412px",
-      minWidth: "600px",
+      maxWidth: "600px",
       
     }
   },
