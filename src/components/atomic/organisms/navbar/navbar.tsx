@@ -7,7 +7,7 @@ export function Navbar() {
   const styles = NavbarStyles();
 
   return (
-    <Box sx={styles.Navbar}>
+    <Box sx={styles.Navbar} component="header">
       <Box sx={styles.Navbar__content}>
         <Logo />
         <>

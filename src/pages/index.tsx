@@ -1,11 +1,12 @@
+import { Footer } from "@/components/atomic/organisms/footer/footer"
 import { Navbar } from "@/components/atomic/organisms/navbar/navbar"
+import { SectionBusiness } from "@/components/atomic/organisms/sectionBusiness/sectionBusiness"
+import { SectionBusinessGallery } from "@/components/atomic/organisms/sectionBusinessGallery/sectionBusinessGallery"
 import { SectionIdeas } from "@/components/atomic/organisms/sectionIdeas/sectionIdeas"
 import { SectionSimilar } from "@/components/atomic/organisms/sectionSimilar/sectionSimilar"
 import { SectionTeamBrainStorming } from "@/components/atomic/organisms/sectionTeamBrainStorming/sectionTeamBrainStorming"
 import { SectionTopics } from "@/components/atomic/organisms/sectionTopics/sectionTopics"
-import { SectionBusiness } from "@/components/atomic/organisms/sectionBusiness/sectionBusiness"
 import Head from "next/head"
-import { SectionBusinessGallery } from "@/components/atomic/organisms/sectionBusinessGallery/sectionBusinessGallery"
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <SectionSimilar/>
       <SectionBusiness/>
       <SectionBusinessGallery/>
+      <Footer/>
     </>
   )
 }
