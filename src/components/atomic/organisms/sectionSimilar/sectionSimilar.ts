@@ -4,4 +4,3 @@ export interface SectionSimilarProps {
     slides: SlideProps[]
   }
 
-export { SlideProps };
