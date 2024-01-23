@@ -1,7 +1,11 @@
-import { Box, Button, Typography } from "@mui/material"
+import { Box, Typography } from "@mui/material"
 import { IconArrowNarrowRight, IconPlayerPlay } from "@tabler/icons-react"
 import { theme } from "../../../../libs/theme"
+import { Button } from "../../atoms/button/button.tsx"
+import { Title } from "../../atoms/title/title.tsx"
 import { SectionIdeasStyles } from "./sectionIdeas.styles"
+import { Description } from "../../atoms/description/description.tsx"
+import { ImageBackground } from "../../atoms/imageBackground/imageBackground.tsx"
 
 export function SectionIdeas() {
   const styles = SectionIdeasStyles()
@@ -9,14 +13,14 @@ export function SectionIdeas() {
   return (
     <Box sx={styles.sectionIdeas} component="section">
       <Box sx={styles.sectionIdeas__content}>
-        <Typography sx={styles.sectionIdeas__title} component="h2">
+        <Title sx={styles.sectionIdeas__title} heading="h2">
           All your ideas in one place
-        </Typography>
-        <Typography sx={styles.sectionIdeas__description} component="p">
+        </Title>
+        <Description sx={styles.sectionIdeas__description}>
           Sit elit feugiat turpis sed integer integer accumsan turpis. Sed
           suspendisse nec lorem mauris. Pharetra, eu imperdiet ipsum ultrices
           amet, dui sit suspendisse.
-        </Typography>
+        </Description>
         <Button sx={styles.sectionIdeas__button}>
           Start For Free <IconArrowNarrowRight />
         </Button>
@@ -31,14 +35,12 @@ export function SectionIdeas() {
             <IconPlayerPlay color={theme.palette.brand[50]} />
             <Typography sx={styles.sectionIdeas__label}>Watch Demo</Typography>
           </Button>
-          <Box
-            component="img"
-            src="./img/sectionIdeas/Ellipses1.svg"
+          <ImageBackground
+            img="./img/sectionIdeas/Ellipses1.svg"
             sx={styles.sectionIdeas__icon1}
           />
-          <Box
-            component="img"
-            src="./img/sectionIdeas/Ellipses2.svg"
+          <ImageBackground
+            img="./img/sectionIdeas/Ellipses2.svg"
             sx={styles.sectionIdeas__icon2}
           />
         </Box>

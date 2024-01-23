@@ -1,10 +1,7 @@
-import { Box, SxProps } from "@mui/material";
+import React from "react"
+import { Box } from "@mui/material"
+import { ImageBoxProps } from "./imageBox.ts"
 
-interface ImageBoxProps {
-    style: SxProps;
-    imagePath: string;
-  }
-  
-  export const ImageBox = ({ style, imagePath }: ImageBoxProps) => (
-    <Box sx={{ ...style, background: `url('${imagePath}')` }}></Box>
-  );
+export const ImageBox = ({ style, imagePath }: ImageBoxProps) => (
+  <Box sx={{ ...style, background: `url('${imagePath}')` }}></Box>
+)

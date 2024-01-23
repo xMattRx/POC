@@ -1,28 +1,17 @@
-import { Box, Button, Typography } from "@mui/material"
+import { Box } from "@mui/material"
+import React from "react"
 import { SlideStyles } from "./slide.styles"
-import Link from "next/link"
-import { theme } from "../../../../libs/theme"
-import { IconArrowNarrowRight } from "@tabler/icons-react"
+import { SlideProps } from "./slide.ts"
+import { SlideContent } from "../slideContent/slideContent.tsx"
 
-export default function Slide() {
+export default function Slide({ img, topic, description }: SlideProps) {
   const styles = SlideStyles()
 
   return (
     <Box sx={styles.slide}>
       <Box sx={styles.slide__container}>
-        <Box sx={styles.slide__image}>
-          <Box sx={styles.slide__content}>
-            <Typography sx={styles.slide__topic}>Artist & investor</Typography>
-            <Typography sx={styles.slide__description}>
-              Enim sagittis, sit porttitor morbi lobortis amet, libero
-              adipiscing auctor. Malesuada tristique libero, id netus tincidunt.
-              Egestas ac arcu amet nisl quis est ...
-            </Typography>
-            <Button sx={styles.slide__link}>
-              <Link href="#">Read Full Story</Link>
-              <IconArrowNarrowRight color={theme.palette.brand[50]} />
-            </Button>
-          </Box>
+        <Box sx={{ ...styles.slide__image, backgroundImage: img }}>
+          <SlideContent description={description} topic={topic} />
         </Box>
       </Box>
     </Box>

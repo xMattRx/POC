@@ -3,8 +3,9 @@ import { Logo } from "./logo"
 
 const meta: Meta<typeof Logo> = {
   title: "atoms/Logo",
-  component: Logo,
   tags: ["autodocs"],
+  component: Logo,
+  
 }
 export default meta
 

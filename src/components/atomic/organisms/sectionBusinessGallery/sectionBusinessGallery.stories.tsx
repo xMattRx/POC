@@ -3,8 +3,9 @@ import { SectionBusinessGallery } from "./sectionBusinessGallery"
 
 const meta: Meta<typeof SectionBusinessGallery> = {
   title: "organisms/SectionBusinessGallery",
-  component: SectionBusinessGallery,
   tags: ["autodocs"],
+  component: SectionBusinessGallery,
+  
   parameters:{
     layout: "fullscreen"
   },

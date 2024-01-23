@@ -22,20 +22,17 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     paddingTop: "48px",
     width: "100%",
     [theme.breakpoints.up("md")]: {
-      flexDirection: "row",
-      justifyContent: "space-between",
       paddingTop: "80px",
       paddingRight: "80px",
-      gap: "0px"
     }
   },
 
   sectionBusinessGallery__left: {
-    display: "none",
+    display: "flex",
     padding: "0 0 0 16px",
+    flexDirection: "column",
     [theme.breakpoints.up("md")]: {
       alignSelf: "baseline",
-      flexDirection: "column",
       gap: "30px",
       padding: "0 0 0 80px",
       width: "100%"
@@ -44,13 +41,15 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
   sectionBusinessGallery__text: {
     alignItems: "center",
     flexDirection: "column",
+    display: "flex",
     [theme.breakpoints.up("md")]: {
       alignItems: "flex-start",
       alignSelf: "flex-start",
       boxSizing: "content-box",
       maxWidth: "625px",
       width: "100%"
-    }
+    },
+  
   },
   sectionBusinessGallery__topic: {
     color: theme.palette.grey[100],
@@ -62,6 +61,7 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     textTransform: "uppercase",
     textAlign: "center",
     [theme.breakpoints.up("md")]: {
+      fontSize: "18px",
       textAlign: "left"
     }
   },
@@ -78,7 +78,8 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
       lineHeight: "110%",
       maxWidth: "460px",
       textAlign: "left"
-    }
+    },
+   
   },
   sectionBusinessGallery__description: {
     color: theme.palette.brand[200],
@@ -92,7 +93,8 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
       lineHeight: "160%",
       marginBottom: "32px",
       maxWidth: "470px"
-    }
+    },
+   
   },
   sectionBusinessGallery__button: {
     background: theme.palette.brand["50"],
@@ -112,7 +114,7 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     }
   },
   sectionBusinessGallery__galleryDown: {
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       gap: "30px",
       display: "flex",
       alignItems: "flex-end",
@@ -120,36 +122,39 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     }
   },
   sectionBusinessGallery__picture7: {
-    [theme.breakpoints.up("md")]: {
-      height: "240px",
-      maxWidth: "459px",
-      width: "100%"
-    }
+    height: "108px",
+    maxWidth: "207px",
+    left: "-119px",
+    position: "absolute",
+    width: "100%",
+    top: "585px",
+   
   },
   sectionBusinessGallery__picture8: {
-    [theme.breakpoints.up("md")]: {
-      display: "block",
+    position: "absolute",
+      display: "none",
       height: "210px",
       maxWidth: "135px",
       width: "100%"
-    }
+    
   },
   sectionBusinessGallery__gallery: {
     display: "flex",
     justifyContent: "center",
-    height: "638px",
-    [theme.breakpoints.up("md")]: {
+    height: "630px",
+    width: "100%",
+    [theme.breakpoints.up("lg")]: {
       height: "1120px",
-      width: "100%"
     }
   },
   sectionBusinessGallery__galleryContent: {
-    display: "none",
+    display: "flex",
     flexWrap: "wrap",
     height: "630px",
-    maxWidth: "390px",
+    overflow: "hidden",
+    position: "relative",
     width: "100%",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       justifyContent: "flex-end",
       gap: "30px",
       height: "852px",
@@ -162,50 +167,47 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     }
   },
   sectionBusinessGallery__picture1: {
-    [theme.breakpoints.up("md")]: {
-      alignSelf: "end",
-      height: "210px",
-      maxWidth: "135px",
-      width: "100%"
-    }
+    left: "102px",
+    height: "94px",
+    maxWidth: "61px",
+    top: "21px",
+    width: "100%",
+    position: "absolute",
   },
   sectionBusinessGallery__picture2: {
-    [theme.breakpoints.up("md")]: {
-      height: "240px",
-      width: "100%",
-      maxWidth: "459px"
-    }
+    height: "116px",
+    position: "absolute",
+    right: "-8px"
   },
   sectionBusinessGallery__picture3: {
-    [theme.breakpoints.up("md")]: {
-      height: "312px",
-      maxWidth: "624px",
-      width: "100%",
-    }
+    height: "155px",
+    maxWidth: "310px",
+    position: "absolute",
+    top: "130px",
+    right: "-17px",
+    width: "100%",
+    
   },
   sectionBusinessGallery__picture4: {
-    [theme.breakpoints.up("md")]: {
-      display: "block",
-      height: "210px",
-      maxWidth: "135px",
-      width: "100%"
-    }
+    display: "none",
+    height: "210px",
+    maxWidth: "135px",
+    width: "100%",
+  
   },
   sectionBusinessGallery__picture5: {
-    [theme.breakpoints.up("md")]: {
-      display: "block",
-      height: "240px",
-      maxWidth: "459px",
-      width: "100%"
-    }
+    display: "none",
+    height: "240px",
+    maxWidth: "459px",
+    width: "100%",
   },
   sectionBusinessGallery__picture6: {
-    [theme.breakpoints.up("md")]: {
-      alignSelf: "flex-end",
-      marginTop: "-195px",
-      height: "210px",
-      maxWidth: "135px",
-      width: "100%"
-    }
+    position: "absolute",
+    height: "94px",
+    maxWidth: "61px",
+    top: "480px",
+    left: "28.2px"
+    
+  
   }
 })

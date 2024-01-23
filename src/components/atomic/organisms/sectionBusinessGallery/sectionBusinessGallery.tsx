@@ -1,6 +1,10 @@
-import { Box, Button, Typography } from "@mui/material"
+import { Box, Typography } from "@mui/material"
+import { Button } from "../../atoms/button/button.tsx"
+import { Title } from "../../atoms/title/title.tsx"
 import { SectionBrainstormNow } from "../sectionBrainstormNow/sectionBrainstormNow"
 import { SectionBusinessGalleryStyles } from "./sectionBusinessGallery.styles"
+import { theme } from "../../../../libs/theme"
+import { Topic } from "../../atoms/topic/topic.tsx"
 
 export function SectionBusinessGallery() {
   const styles = SectionBusinessGalleryStyles()
@@ -10,12 +14,12 @@ export function SectionBusinessGallery() {
       <Box sx={styles.sectionBusinessGallery__content}>
         <Box sx={styles.sectionBusinessGallery__left}>
           <Box sx={styles.sectionBusinessGallery__text}>
-            <Typography sx={styles.sectionBusinessGallery__topic}>
+            <Topic color={theme.palette.grey[100]} sx={styles.sectionBusinessGallery__topic}>
               No limits
-            </Typography>
-            <Typography sx={styles.sectionBusinessGallery__title}>
+            </Topic>
+            <Title heading="h1" sx={styles.sectionBusinessGallery__title}>
               Unlimited ideas for your projects
-            </Typography>
+            </Title>
             <Typography sx={styles.sectionBusinessGallery__description}>
               Scelerisque auctor dolor diam tortor, fames faucibus non interdum
               nunc. Ultrices nibh sapien elit gravida ac, rutrum molestie

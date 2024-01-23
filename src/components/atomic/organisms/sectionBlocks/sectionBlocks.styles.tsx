@@ -5,13 +5,13 @@ type MuiStyles = {
   [key: string]: SxProps
 }
 
-export const SectionTopicsStyles = (): MuiStyles => ({
-  sectionTopics: {
+export const SectionBlocksStyles = (): MuiStyles => ({
+  sectionBlocks: {
     display: "flex",
     justifyContent: "center",
     width: "100%"
   },
-  sectionTopics__content: {
+  sectionBlocks__content: {
     display: "flex",
     flexDirection: "column",
     gap: "32px",

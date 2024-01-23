@@ -5,20 +5,20 @@ type MuiStyles = {
   [key: string]: SxProps
 }
 
-export const TopicStyles = (color:string): MuiStyles => ({
-  topic__block: {
+export const BlockStyles = (color:string): MuiStyles => ({
+  block__block: {
     alignItems: "center",
     display: "flex",
     flexDirection: "column",
     gap: "16px"
   },
-  topic__img: {
+  block__img: {
     background: `${color}`,
     borderRadius: "50%",
     padding: "16px",
     width: "96px"
   },
-  topic__title: {
+  block__title: {
     color: theme.palette.brand[200],
     fontSize: "20px",
     fontWeight: "500",
@@ -28,7 +28,7 @@ export const TopicStyles = (color:string): MuiStyles => ({
       fontSize: "24px"
     }
   },
-  topic__description: {
+  block__description: {
     color: theme.palette.brand[200],
     fontSize: "16px",
     lineHeight: "140%",

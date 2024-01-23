@@ -29,7 +29,6 @@ export const SectionBusinessStyles = (): MuiStyles => ({
     display: "flex",
     gap: "32px",
     flexDirection: "column",
-    [theme.breakpoints.up("md")]: {}
   },
   sectionBusiness__title: {
     color: theme.palette.brand["200"],
@@ -45,7 +44,11 @@ export const SectionBusinessStyles = (): MuiStyles => ({
   sectionBusiness__description: {
     fontSize: "16px",
     lineHeight: "140%",
-    textAlign: "center"
+    textAlign: "center",
+    [theme.breakpoints.up("md")]: {
+      fontSize: "18px",
+      lineHeight: "160%",
+    }
   },
   sectionBusiness__button: {
     background: theme.palette.common.white,

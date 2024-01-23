@@ -14,7 +14,6 @@ export const SlideStyles = (): MuiStyles => ({
     width: "100%",
     [theme.breakpoints.up("md")]: {
       height: "510px",
-
     }
   },
   slide__container: {
@@ -29,7 +28,6 @@ export const SlideStyles = (): MuiStyles => ({
   },
   slide__image: {
     borderRadius: "5px",
-    background: "url('./img/sectionSimilar/woman.png')",
     backgroundSize: "cover",
     height: "241px",
     position: "relative",
@@ -55,22 +53,21 @@ export const SlideStyles = (): MuiStyles => ({
     left: "17px",
     top: "209px",
     width: "327px",
-    [theme.breakpoints.between(769,1240)]: {
-      left: "520px",
-      width: "340px",
-    },
     [theme.breakpoints.up("md")]: {
-      boxSizing: "border-box",
       top: "50%",
       transform: "translateY(-50%)",
       left: "600px",
       maxWidth: "680px",
       padding: "48px 48px 24px 48px",
       width: "100%"
-    }
+    },
+    [theme.breakpoints.between(769,1240)]: {
+      left: "520px",
+      width: "340px",
+    },
   },
   slide__topic: {
-    color: theme.palette.grey[100],
+    
     fontSize: "20px",
     fontWeight: 700,
     lineHeight: "100%",

@@ -3,8 +3,9 @@ import { SectionBrainstormNow } from "./sectionBrainstormNow"
 
 const meta: Meta<typeof SectionBrainstormNow> = {
   title: "organisms/SectionBrainstormNow",
-  component: SectionBrainstormNow,
   tags: ["autodocs"],
+  component: SectionBrainstormNow,
+  
   parameters: {
     layout: "fullscreen"
   }

@@ -1,9 +1,9 @@
-import { SxProps } from "@mui/material"
-import { theme } from "../../../../libs/theme"
+import { SxProps } from "@mui/material";
+import { theme } from "../../../../libs/theme";
 
 type MuiStyles = {
-  [key: string]: SxProps
-}
+  [key: string]: SxProps;
+};
 
 export const SectionSimilarStyles = (): MuiStyles => ({
   sectionSimilar: {
@@ -32,7 +32,6 @@ export const SectionSimilarStyles = (): MuiStyles => ({
     [theme.breakpoints.up("md")]: {
       fontSize: "56px",
       fontWeight: 800,
-      lineHeight: "110%"
     }
   },
   sectionSimilar__description: {
@@ -41,4 +40,8 @@ export const SectionSimilarStyles = (): MuiStyles => ({
     lineHeight: "160%",
     textAlign: "center",
   }
-})
+});
+
+const styles: MuiStyles = SectionSimilarStyles();
+
+export { styles };
