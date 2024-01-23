@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react"
-import { SlideProps } from "../../organisms/sectionSimilar/sectionSimilar.ts"
-import {SlideContent} from "./slideContent.tsx"
+import { SlideProps } from "../slide/slide.ts"
+import { SlideContent } from "./slideContent.tsx"
 
 const meta: Meta<typeof SlideContent> = {
   title: "molecules/SlideContent",
