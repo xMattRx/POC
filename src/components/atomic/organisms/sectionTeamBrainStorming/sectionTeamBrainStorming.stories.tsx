@@ -3,8 +3,9 @@ import { SectionTeamBrainStorming } from "./sectionTeamBrainStorming"
 
 const meta: Meta<typeof SectionTeamBrainStorming> = {
   title: "organisms/SectionTeamBrainStorming",
-  component: SectionTeamBrainStorming,
   tags: ["autodocs"],
+  component: SectionTeamBrainStorming,
+  
   parameters:{
     layout: "fullscreen"
   },

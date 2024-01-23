@@ -1,4 +1,9 @@
-import { Box, Button, Typography } from "@mui/material"
+import { Box } from "@mui/material"
+import { theme } from "../../../../libs/theme"
+import { Button } from "../../atoms/button/button.tsx"
+import { Description } from "../../atoms/description/description.tsx"
+import { Title } from "../../atoms/title/title.tsx"
+import { Topic } from "../../atoms/topic/topic.tsx"
 import { SectionBusinessStyles } from "./sectionBusiness.styles"
 
 export function SectionBusiness() {
@@ -8,13 +13,13 @@ export function SectionBusiness() {
     <Box sx={styles.sectionBusiness} component="section">
       <Box sx={styles.sectionBusiness__content}>
         <Box sx={styles.sectionBusiness__grow}>
-          <Typography sx={styles.sectionBusiness__title} component="h1">
+          <Title sx={styles.sectionBusiness__title} heading="h1">
             Get your business to grow fast
-          </Typography>
-          <Typography sx={styles.sectionBusiness__description}>
+          </Title>
+          <Description sx={styles.sectionBusiness__description}>
             Sed ut vestibulum eget purus ornare. Risus elit et fringilla
             habitant ut facilisi.
-          </Typography>
+          </Description>
           <Button sx={styles.sectionBusiness__button}>View Product Tour</Button>
         </Box>
 
@@ -32,17 +37,17 @@ export function SectionBusiness() {
             />
           </Box>
           <Box sx={styles.sectionBusiness__unlimitedContent}>
-            <Typography sx={styles.sectionBusiness__unlimitedTopic}>
+            <Topic color={theme.palette.grey[100]} sx={styles.sectionBusiness__unlimitedTopic}>
               No limits
-            </Typography>
-            <Typography sx={styles.sectionBusiness__unlimitedTitle}>
+            </Topic>
+            <Title heading="h1" sx={styles.sectionBusiness__unlimitedTitle}>
               Unlimited ideas for your projects
-            </Typography>
-            <Typography sx={styles.sectionBusiness__unlimitedDescription}>
+            </Title>
+            <Description sx={styles.sectionBusiness__unlimitedDescription}>
               Scelerisque auctor dolor diam tortor, fames faucibus non interdum
               nunc. Ultrices nibh sapien elit gravida ac, rutrum molestie
               adipiscing lacinia.
-            </Typography>
+            </Description>
           </Box>
         </Box>
       </Box>

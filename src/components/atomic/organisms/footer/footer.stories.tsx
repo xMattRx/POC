@@ -3,8 +3,8 @@ import { Footer } from "./footer"
 
 const meta: Meta<typeof Footer> = {
   title: "organisms/Footer",
-  component: Footer,
   tags: ["autodocs"],
+  component: Footer,
   parameters:{
     layout: "fullscreen"
   },

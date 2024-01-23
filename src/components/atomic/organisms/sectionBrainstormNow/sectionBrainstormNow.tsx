@@ -1,4 +1,10 @@
-import { Box, Button, Typography } from "@mui/material"
+import { Box, Typography } from "@mui/material"
+import { theme } from "../../../../libs/theme"
+import { Button } from "../../atoms/button/button.tsx"
+import { Description } from "../../atoms/description/description.tsx"
+import { ImageBackground } from "../../atoms/imageBackground/imageBackground.tsx"
+import { Title } from "../../atoms/title/title.tsx"
+import { Topic } from "../../atoms/topic/topic.tsx"
 import { SectionBrainstormNowStyles } from "./sectionBrainstormNow.styles"
 
 export function SectionBrainstormNow() {
@@ -8,32 +14,33 @@ export function SectionBrainstormNow() {
     <Box sx={styles.sectionBrainstormNow} component="section">
       <Box sx={styles.sectionBrainstormNow__iconsContainer}>
         <Box sx={styles.sectionBrainstormNow__content}>
-          <Typography sx={styles.sectionBrainstormNow__topic}>
+          <Topic
+            color={theme.palette.brand[300]}
+            sx={styles.sectionBrainstormNow__topic}
+          >
             Start Building ideas
-          </Typography>
-          <Typography sx={styles.sectionBrainstormNow__title}>
+          </Topic>
+          <Title heading="h1" sx={styles.sectionBrainstormNow__title}>
             Brainstorm now!
-          </Typography>
-          <Typography sx={styles.sectionBrainstormNow__description}>
+          </Title>
+          <Description sx={styles.sectionBrainstormNow__description}>
             Malesuada ut aliquam at ac est nisi, interdum etiam dignissim.
             <br />
             <Typography component="span">
               Risus elit et fringilla habitant ut facilisi.
             </Typography>
-          </Typography>
+          </Description>
           <Button sx={styles.sectionBrainstormNow__button}>
             Start For Free
           </Button>
         </Box>
-        <Box
+        <ImageBackground
           sx={styles.sectionBrainstormNow__ellipses}
-          component="img"
-          src="./img/sectionBusinessGallery/Ellipses_Brainstorm.svg"
+          img="./img/sectionBusinessGallery/Ellipses_Brainstorm.svg"
         />
-        <Box
+        <ImageBackground
           sx={styles.sectionBrainstormNow__phones}
-          component="img"
-          src="./img/sectionBusinessGallery/Iphones.svg"
+          img="./img/sectionBusinessGallery/Iphones.svg"
         />
       </Box>
     </Box>

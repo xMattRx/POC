@@ -3,8 +3,9 @@ import { SectionIdeas } from "./sectionIdeas"
 
 const meta: Meta<typeof SectionIdeas> = {
   title: "organisms/SectionIdeas",
-  component: SectionIdeas,
   tags: ["autodocs"],
+  component: SectionIdeas,
+  
   parameters:{
     layout: "fullscreen"
   },

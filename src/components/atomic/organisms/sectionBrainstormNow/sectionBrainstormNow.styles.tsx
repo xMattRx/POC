@@ -35,12 +35,12 @@ export const SectionBrainstormNowStyles = (): MuiStyles => ({
     maxWidth: "1440px",
     padding: "48px 16px",
     width: "100%",
+    zIndex: "2",
     [theme.breakpoints.up("md")]: {
       padding: "80px 0"
     }
   },
   sectionBrainstormNow__topic: {
-    color: theme.palette.brand[300],
     fontSize: "20px",
     fontWeight: 700,
     lineHeight: "100%",
@@ -108,6 +108,7 @@ export const SectionBrainstormNowStyles = (): MuiStyles => ({
   },
   sectionBrainstormNow__phones: {
     display: "none",
+    
     [theme.breakpoints.up(1024)]: {
       display: "block",
       bottom: "0px",

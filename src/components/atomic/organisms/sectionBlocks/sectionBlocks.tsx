@@ -1,13 +1,13 @@
-import React from 'react';
 import { Box } from '@mui/material';
-import { Topic } from '../../molecules/topic/topic';
-import { SectionTopicsStyles } from './sectionTopics.styles';
+import { Block } from '../../molecules/block/block.tsx';
+import { SectionBlocksStyles } from './sectionBlocks.styles';
+import React from 'react';
 
 
-export function SectionTopics() {
-  const styles = SectionTopicsStyles();
+export function SectionBlocks() {
+  const styles = SectionBlocksStyles();
 
-  const topics = [
+  const blocks = [
     {
       color: '#D1FAE5',
       img: './img/sectionTopics/attach.svg',
@@ -35,10 +35,10 @@ export function SectionTopics() {
   ];
 
   return (
-    <Box sx={styles.sectionTopics} component="section">
-      <Box sx={styles.sectionTopics__content}>
-        {topics.map((topic, index) => (
-          <Topic key={index} {...topic} />
+    <Box sx={styles.sectionBlocks} component="section">
+      <Box sx={styles.sectionBlocks__content}>
+        {blocks.map((block, index) => (
+          <Block key={index} {...block} />
         ))}
       </Box>
     </Box>

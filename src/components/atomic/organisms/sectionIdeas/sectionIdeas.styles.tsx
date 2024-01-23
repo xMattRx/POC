@@ -74,7 +74,8 @@ export const SectionIdeasStyles = (): MuiStyles => ({
     display: "flex",
     gap: "16px",
     flexDirection: "column",
-    position: "relative"
+    position: "relative",
+    
   },
   sectionIdeas__image: {
     maxWidth: "1100px",

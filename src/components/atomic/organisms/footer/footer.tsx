@@ -1,6 +1,4 @@
 import { Box, Typography } from "@mui/material"
-import { FooterStyles } from "./footer.styles"
-import Link from "next/link"
 import {
   IconBrandFacebookFilled,
   IconBrandInstagram,
@@ -9,176 +7,112 @@ import {
   IconBrandYoutubeFilled
 } from "@tabler/icons-react"
 import { theme } from "../../../../libs/theme"
+import { SocialIcon } from "../../atoms/socialIcon/socialIcon.tsx"
+import { FooterColumn } from "../../molecules/footerColumn/footerColumn.tsx"
+import { FooterLinks } from "../../molecules/footerLinks/footerLinks.tsx"
+import { FooterStyles } from "./footer.styles"
+
+const socialLinks = [
+  {
+    icon: (
+      <IconBrandYoutubeFilled size={24} color={theme.palette.brand["100"]} />
+    ),
+    href: "#"
+  },
+  {
+    icon: (
+      <IconBrandFacebookFilled size={24} color={theme.palette.brand["100"]} />
+    ),
+    href: "#"
+  },
+  {
+    icon: (
+      <IconBrandTwitterFilled size={24} color={theme.palette.brand["100"]} />
+    ),
+    href: "#"
+  },
+  {
+    icon: <IconBrandInstagram size={24} color={theme.palette.brand["100"]} />,
+    href: "#"
+  },
+  {
+    icon: <IconBrandLinkedin size={24} color={theme.palette.brand["100"]} />,
+    href: "#"
+  }
+]
 
 export function Footer() {
   const styles = FooterStyles()
+
+  const footerColumns = [
+    {
+      title: "categories",
+      items: [
+        "User Interface",
+        "User Experience",
+        "Digital Media",
+        "Lifestyle",
+        "Programming",
+        "Animation"
+      ]
+    },
+    {
+      title: "product",
+      items: ["Pricing", "Overview", "Browse", "Accesibility", "Five"]
+    },
+    {
+      title: "solutions",
+      items: ["Brainstorming", "Ideation", "Wireframing", "Research"]
+    },
+    { title: "resources", items: ["Help Center", "Blog", "Tutorials"] },
+    {
+      title: "support",
+      items: [
+        "Contact Us",
+        "Developers",
+        "Documentation",
+        "Integrations",
+        "Reports",
+        "Webinar"
+      ]
+    },
+    { title: "company", items: ["About", "Press", "Events", "Careers"] }
+  ]
+
+  const footerLinks = [
+    { label: "Terms", href: "#" },
+    { label: "Privacy", href: "#" },
+    { label: "Contact", href: "#" }
+  ]
 
   return (
     <Box sx={styles.footer} component="footer">
       <Box sx={styles.footer__content}>
         <Box sx={styles.footer__columns}>
-          <Box sx={styles.footer__column}>
-            <Typography sx={styles.footer__title}>categories</Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">User Interface</Link>
-            </Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">User Experience</Link>
-            </Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Digital Media</Link>
-            </Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Lifestyle</Link>
-            </Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Programming</Link>
-            </Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Animation</Link>
-            </Typography>
-          </Box>
-          <Box sx={styles.footer__column}>
-            <Typography sx={styles.footer__title}>product</Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Pricing</Link>
-            </Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Overview</Link>
-            </Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Browse</Link>
-            </Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Accesibility</Link>
-            </Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Five</Link>
-            </Typography>
-          </Box>
-          <Box sx={styles.footer__column}>
-            <Typography sx={styles.footer__title}>solutions</Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Brainstorming</Link>
-            </Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Ideation</Link>
-            </Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Wireframing</Link>
-            </Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Research</Link>
-            </Typography>
-          </Box>
-          <Box sx={styles.footer__column}>
-            <Typography sx={styles.footer__title}>resources</Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Help Center</Link>
-            </Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Blog</Link>
-            </Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Tutorials</Link>
-            </Typography>
-          </Box>
-          <Box sx={styles.footer__column}>
-            <Typography sx={styles.footer__title}>support</Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Contact Us</Link>
-            </Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Developers</Link>
-            </Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Documentation</Link>
-            </Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Integrations</Link>
-            </Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Reports</Link>
-            </Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Webinar</Link>
-            </Typography>
-          </Box>
-          <Box sx={styles.footer__column}>
-            <Typography sx={styles.footer__title}>company</Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">About</Link>
-            </Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Press</Link>
-            </Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Events</Link>
-            </Typography>
-            <Typography sx={styles.footer__item}>
-              <Link href="#">Careers</Link>
-            </Typography>
-          </Box>
+          {footerColumns.map((column, columnIndex) => (
+            <FooterColumn
+              title={column.title}
+              items={column.items}
+              key={columnIndex}
+            />
+          ))}
         </Box>
         <Box sx={styles.footer__copyright}>
           <Typography sx={styles.footer__rights}>
             @ 2023 Wrapp. All rights reserved
           </Typography>
           <Box sx={styles.footer__linksAndIcons}>
-            <Box sx={styles.footer__links}>
-              <Typography sx={styles.footer__link}>
-                <Link href="#">Terms</Link>
-              </Typography>
-              <Typography sx={styles.footer__link}>
-                <Link href="#">Privacy</Link>
-              </Typography>
-              <Typography sx={styles.footer__link}>
-                <Link href="#">Contact</Link>
-              </Typography>
-            </Box>
+            <FooterLinks links={footerLinks} />
             <Box sx={styles.footer__socialLinks}>
-              <Typography sx={styles.footer__social}>
-                <Link href="#">
-                  <IconBrandYoutubeFilled
-                    size={24}
-                    color={theme.palette.brand["100"]}
-                  />
-                </Link>
-              </Typography>
-              <Typography sx={styles.footer__social}>
-                <Link href="#">
-                  <IconBrandFacebookFilled
-                    size={24}
-                    color={theme.palette.brand["100"]}
-                  />
-                </Link>
-              </Typography>
-              <Typography sx={styles.footer__social}>
-                <Link href="#">
-                  <IconBrandTwitterFilled
-                    size={24}
-                    color={theme.palette.brand["100"]}
-                  />
-                </Link>
-              </Typography>
-              <Typography sx={styles.footer__social}>
-                <Link href="#">
-                  <IconBrandInstagram
-                    size={24}
-                    color={theme.palette.brand["100"]}
-                  />
-                </Link>
-              </Typography>
-              <Typography sx={styles.footer__social}>
-                <Link href="#">
-                  <IconBrandLinkedin
-                    size={24}
-                    color={theme.palette.brand["100"]}
-                  />
-                </Link>
-              </Typography>
+              {socialLinks.map((socialLink, socialLinkIndex) => (
+                <SocialIcon
+                  key={socialLinkIndex}
+                  icon={socialLink.icon}
+                  href={socialLink.href}
+                />
+              ))}
             </Box>
-            <Box component="img" src="./img/footer/App_Store.svg"/>
+            <Box component="img" src="./img/footer/App_Store.svg" />
           </Box>
         </Box>
       </Box>

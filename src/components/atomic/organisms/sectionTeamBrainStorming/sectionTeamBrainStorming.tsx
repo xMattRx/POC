@@ -1,6 +1,10 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import { theme } from "../../../../libs/theme";
+import { Button } from "../../atoms/button/button.tsx";
+import { ImageBox } from "../../atoms/imageBox/imageBox.tsx";
+import { Title } from "../../atoms/title/title.tsx";
+import { Topic } from "../../atoms/topic/topic.tsx";
 import { SectionTeamBrainStormingStyles } from "./sectionTeamBrainStorming.styles";
-import { ImageBox } from "../../atoms/imageBox/imageBox";
 
 
 
@@ -21,18 +25,18 @@ export function SectionTeamBrainStorming() {
           <Box
             sx={styles.sectionTeamBrainStorming__picture1}></Box>
           <Box sx={styles.sectionTeamBrainStorming__informations}>
-            <Typography
-              component="h1"
+            <Topic
+              color={theme.palette.brand[300]}
               sx={styles.sectionTeamBrainStorming__topic}
             >
               team work
-            </Typography>
-            <Typography
-              component="h2"
+            </Topic>
+            <Title
+              heading="h2"
               sx={styles.sectionTeamBrainStorming__title}
             >
               Easily brainstorm with your team
-            </Typography>
+            </Title>
             <Typography
               component="p"
               sx={styles.sectionTeamBrainStorming__description}
@@ -58,7 +62,6 @@ export function SectionTeamBrainStorming() {
               imagePath={imagePath}
             />
           ))}
-        
         </Box>
       </Box>
     </Box>

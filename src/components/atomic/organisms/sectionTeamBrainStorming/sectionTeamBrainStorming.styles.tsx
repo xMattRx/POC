@@ -18,7 +18,6 @@ export const SectionTeamBrainStormingStyles = (): MuiStyles => ({
     justifyContent: "center",
     maxWidth: "1440px",
     width: "100%",
-    [theme.breakpoints.up("md")]: {}
   },
   sectionTeamBrainStorming__top: {
     alignItems: "center",
@@ -121,7 +120,6 @@ export const SectionTeamBrainStormingStyles = (): MuiStyles => ({
     flex: "2",
     backgroundSize: "cover !important",
     [theme.breakpoints.up("md")]: {
-      backgroundSize: "cover !important",
       backgroundPositionX: "center",
       backgroundPositionY: "center",
       height: "210px",
@@ -134,7 +132,6 @@ export const SectionTeamBrainStormingStyles = (): MuiStyles => ({
     flex: "1",
     backgroundSize: "cover !important",
     [theme.breakpoints.up("md")]: {
-      backgroundSize: "cover !important",
       backgroundPositionX: "center",
       backgroundPositionY: "center",
       height: "210px",

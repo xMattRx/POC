@@ -1,11 +1,11 @@
-import { Footer } from "@/components/atomic/organisms/footer/footer"
-import { Navbar } from "@/components/atomic/organisms/navbar/navbar"
-import { SectionBusiness } from "@/components/atomic/organisms/sectionBusiness/sectionBusiness"
-import { SectionBusinessGallery } from "@/components/atomic/organisms/sectionBusinessGallery/sectionBusinessGallery"
-import { SectionIdeas } from "@/components/atomic/organisms/sectionIdeas/sectionIdeas"
-import { SectionSimilar } from "@/components/atomic/organisms/sectionSimilar/sectionSimilar"
-import { SectionTeamBrainStorming } from "@/components/atomic/organisms/sectionTeamBrainStorming/sectionTeamBrainStorming"
-import { SectionTopics } from "@/components/atomic/organisms/sectionTopics/sectionTopics"
+import { Footer } from "@/components/atomic/organisms/footer/footer.tsx"
+import { Navbar } from "@/components/atomic/organisms/navbar/navbar.tsx"
+import { SectionBlocks } from "@/components/atomic/organisms/sectionBlocks/sectionBlocks.tsx"
+import { SectionBusiness } from "@/components/atomic/organisms/sectionBusiness/sectionBusiness.tsx"
+import { SectionBusinessGallery } from "@/components/atomic/organisms/sectionBusinessGallery/sectionBusinessGallery.tsx"
+import { SectionIdeas } from "@/components/atomic/organisms/sectionIdeas/sectionIdeas.tsx"
+import { SectionSimilar } from "@/components/atomic/organisms/sectionSimilar/sectionSimilar.tsx"
+import { SectionTeamBrainStorming } from "@/components/atomic/organisms/sectionTeamBrainStorming/sectionTeamBrainStorming.tsx"
 import Head from "next/head"
 
 export default function Home() {
@@ -17,14 +17,61 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
+      <Navbar
+        menuItems={[
+          { label: "Products", link: "#" },
+          { label: "Solutions", link: "#" },
+          { label: "Pricing", link: "#" },
+          { label: "Resources", link: "#" }
+        ]}
+      />
       <SectionIdeas />
-      <SectionTopics/>
-      <SectionTeamBrainStorming/>
-      <SectionSimilar/>
-      <SectionBusiness/>
-      <SectionBusinessGallery/>
-      <Footer/>
+      <SectionBlocks />
+      <SectionTeamBrainStorming />
+      <SectionSimilar
+        slides={[
+          {
+            img: "url('./img/sectionSimilar/woman.png')",
+            topic: "Artist & investor",
+            description: `Enim sagittis, sit porttitor morbi lobortis amet, libero
+          adipiscing auctor. Malesuada tristique libero, id netus tincidunt.
+          Egestas ac arcu amet nisl quis est ...`
+          },
+
+          {
+            img: "url('./img/sectionSimilar/woman.png')",
+            topic: "Artist & investor",
+            description: `Enim sagittis, sit porttitor morbi lobortis amet, libero
+          adipiscing auctor. Malesuada tristique libero, id netus tincidunt.
+          Egestas ac arcu amet nisl quis est ...`
+          },
+
+          {
+            img: "url('./img/sectionSimilar/woman.png')",
+            topic: "Artist & investor",
+            description: `Enim sagittis, sit porttitor morbi lobortis amet, libero
+          adipiscing auctor. Malesuada tristique libero, id netus tincidunt.
+          Egestas ac arcu amet nisl quis est ...`
+          },
+          {
+            img: "url('./img/sectionSimilar/woman.png')",
+            topic: "Artist & investor",
+            description: `Enim sagittis, sit porttitor morbi lobortis amet, libero
+          adipiscing auctor. Malesuada tristique libero, id netus tincidunt.
+          Egestas ac arcu amet nisl quis est ...`
+          },
+          {
+            img: "url('./img/sectionSimilar/woman.png')",
+            topic: "Artist & investor",
+            description: `Enim sagittis, sit porttitor morbi lobortis amet, libero
+          adipiscing auctor. Malesuada tristique libero, id netus tincidunt.
+          Egestas ac arcu amet nisl quis est ...`
+          }
+        ]}
+      />
+      <SectionBusiness />
+      <SectionBusinessGallery />
+      <Footer />
     </>
   )
 }
