@@ -18,7 +18,7 @@ MuiStyles => ({
     maxWidth: '1440px',
     padding: "16px",
     width: '100%',
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up(769)]: {
       alignItems: 'center',
       justifyContent: 'flex-start',
       gap: "38px",
@@ -27,13 +27,13 @@ MuiStyles => ({
   },
   Navbar__menuHamburguer:{
     cursor: 'pointer',
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up(769)]: {
       display: 'none',
     }
   },
   Navbar__menu:{
     display: "none",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up(769)]: {
       alignItems: 'center',
       display: "flex",
       justifyContent: "space-between",
@@ -44,7 +44,7 @@ MuiStyles => ({
     listStyle: "none",
     margin: "0",
     padding: "0",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up(769)]: {
       display: "flex",
       gap: "16px"
     },

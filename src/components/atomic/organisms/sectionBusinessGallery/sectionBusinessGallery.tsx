@@ -1,10 +1,10 @@
 import { Box, Typography } from "@mui/material"
+import { theme } from "../../../../libs/theme"
 import { Button } from "../../atoms/button/button.tsx"
 import { Title } from "../../atoms/title/title.tsx"
+import { Topic } from "../../atoms/topic/topic.tsx"
 import { SectionBrainstormNow } from "../sectionBrainstormNow/sectionBrainstormNow"
 import { SectionBusinessGalleryStyles } from "./sectionBusinessGallery.styles"
-import { theme } from "../../../../libs/theme"
-import { Topic } from "../../atoms/topic/topic.tsx"
 
 export function SectionBusinessGallery() {
   const styles = SectionBusinessGalleryStyles()
@@ -14,7 +14,10 @@ export function SectionBusinessGallery() {
       <Box sx={styles.sectionBusinessGallery__content}>
         <Box sx={styles.sectionBusinessGallery__left}>
           <Box sx={styles.sectionBusinessGallery__text}>
-            <Topic color={theme.palette.grey[100]} sx={styles.sectionBusinessGallery__topic}>
+            <Topic
+              color={theme.palette.grey[100]}
+              sx={styles.sectionBusinessGallery__topic}
+            >
               No limits
             </Topic>
             <Title heading="h1" sx={styles.sectionBusinessGallery__title}>
@@ -28,13 +31,16 @@ export function SectionBusinessGallery() {
             <Button sx={styles.sectionBusinessGallery__button}>
               Start For Free
             </Button>
+          </Box>
+        </Box>
+
+        <Box sx={styles.sectionBusinessGallery__gallery}>
+          <Box sx={styles.sectionBusinessGallery__galleryDown}>
             <Box
               sx={styles.sectionBusinessGallery__picture6}
               component="img"
               src="./img/sectionBusinessGallery/Picture6.png"
             />
-          </Box>
-          <Box sx={styles.sectionBusinessGallery__galleryDown}>
             <Box
               sx={styles.sectionBusinessGallery__picture8}
               component="img"
@@ -45,10 +51,13 @@ export function SectionBusinessGallery() {
               component="img"
               src="./img/sectionBusinessGallery/Picture7.png"
             />
+            <Box
+              sx={styles.sectionBusinessGallery__picture4}
+              component="img"
+              src="./img/sectionBusinessGallery/Picture4.png"
+            />
           </Box>
-        </Box>
 
-        <Box sx={styles.sectionBusinessGallery__gallery}>
           <Box sx={styles.sectionBusinessGallery__galleryContent}>
             <Box
               sx={styles.sectionBusinessGallery__picture1}
@@ -65,11 +74,7 @@ export function SectionBusinessGallery() {
               component="img"
               src="./img/sectionBusinessGallery/Picture3.png"
             />
-            <Box
-              sx={styles.sectionBusinessGallery__picture4}
-              component="img"
-              src="./img/sectionBusinessGallery/Picture4.png"
-            />
+
             <Box
               sx={styles.sectionBusinessGallery__picture5}
               component="img"
