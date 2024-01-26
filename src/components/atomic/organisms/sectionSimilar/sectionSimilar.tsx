@@ -14,7 +14,7 @@ export function SectionSimilar({slides}: SectionSimilarProps) {
   return (
     <Box sx={styles.sectionSimilar} component="section">
       <Box sx={styles.sectionSimilar__content}>
-        <Title heading="h2" sx={styles.sectionSimilar__title}>
+        <Title heading="h1" sx={styles.sectionSimilar__title}>
           Find similar stories
         </Title>
         <Description sx={styles.sectionSimilar__description}>

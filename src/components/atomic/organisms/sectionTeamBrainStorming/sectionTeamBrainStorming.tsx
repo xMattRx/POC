@@ -32,7 +32,7 @@ export function SectionTeamBrainStorming() {
               team work
             </Topic>
             <Title
-              heading="h2"
+              heading="h1"
               sx={styles.sectionTeamBrainStorming__title}
             >
               Easily brainstorm with your team

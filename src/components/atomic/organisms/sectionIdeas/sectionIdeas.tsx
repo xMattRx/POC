@@ -13,7 +13,7 @@ export function SectionIdeas() {
   return (
     <Box sx={styles.sectionIdeas} component="section">
       <Box sx={styles.sectionIdeas__content}>
-        <Title sx={styles.sectionIdeas__title} heading="h2">
+        <Title sx={styles.sectionIdeas__title} heading="h1">
           All your ideas in one place
         </Title>
         <Description sx={styles.sectionIdeas__description}>
