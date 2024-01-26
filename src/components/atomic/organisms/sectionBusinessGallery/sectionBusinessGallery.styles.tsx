@@ -13,17 +13,25 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     flexDirection: "column",
     position: "relative",
     width: "100%",
+    height: "1000px",
+    [theme.breakpoints.up("md")]: {
+      height: "1115px"
+    },
     [theme.breakpoints.up("lg")]: {
       height: "1193px"
-    }
+    },
+  
   },
   sectionBusinessGallery__content: {
     alignItems: "center",
-    display: "flex",
     flexDirection: "column",
     maxWidth: "1440px",
     paddingTop: "48px",
     width: "100%",
+    display: "grid",
+    gridTemplateColumns: "1fr 61px 110px repeat(1, 1fr)",
+    gridTemplateRows: "repeat(2, 1fr) 118px 118px repeat(1, 1fr)",
+    gap: "14px",
     [theme.breakpoints.up("lg")]: {
       paddingTop: "80px",
       paddingLeft: "80px",
@@ -40,14 +48,27 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
   },
 
   sectionBusinessGallery__text: {
+    gridArea: "1 / 1 / 2 / 5",
+    alignSelf: "baseline",
+    justifySelf: "center",
     [theme.breakpoints.up("lg")]: {
+      justifySelf: "start",
+      display: "block",
       alignSelf: "start",
       gridArea: "1 / 1 / 2 / 4",
       width: "460px"
     }
   },
   sectionBusinessGallery__cta: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    gridArea: "2 / 1 / 4 / 5",
+    gridRowStart: 1,
+    gridRowEnd: 0,
+    marginTop: "40px",
     [theme.breakpoints.up("lg")]: {
+      display: "block",
       gridArea: "2 / 1 / 3 / 3",
       marginTop: "360px",
       gridColumnEnd: 4,
@@ -75,8 +96,10 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     fontSize: "32px",
     fontWeight: 700,
     lineHeight: "100%",
+    maxWidth: "361px",
     marginBottom: "32px",
     textAlign: "center",
+    gridArea: "1 / 1 / 3 / 5",
     [theme.breakpoints.up("lg")]: {
       fontSize: "56px",
       fontWeight: 800,
@@ -89,6 +112,7 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     color: theme.palette.brand[200],
     fontSize: "16px",
     lineHeight: "140%",
+    maxWidth: "361px",
     marginBottom: "32px",
     textAlign: "center",
     [theme.breakpoints.up("lg")]: {
@@ -129,22 +153,30 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
   },
 
   sectionBusinessGallery__picture7: {
-    height: "100%",
+    objectFit: "cover",
+    alignSelf: "start",
+    height: "108px",
     width: "100%",
+    gridArea: "4 / 1 / 6 / 1",
+    marginTop: "106px",
     [theme.breakpoints.up("lg")]: {
       gridArea: "3 / 2 / 4 / 4",
       justifySelf: "end",
       gridRowStart: "4",
       gridRowEnd: "1",
       height: "240px",
-      marginTop: "216px",
+      marginTop: "456px",
+      maxWidth: "initial",
       width: "459px"
     }
   },
   sectionBusinessGallery__picture8: {
+    objectFit: "cover",
+    display: "none",
     height: "100%",
     width: "100%",
     [theme.breakpoints.up("lg")]: {
+      display: "block",
       alignSelf: "start",
       gridArea: "3 / 1 / 4 / 2",
       maxWidth: "135px",
@@ -154,8 +186,14 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
   },
 
   sectionBusinessGallery__picture1: {
-    height: "100%",
+    objectFit: "cover",
+    alignSelf: "start",
+    height: "94px",
+    maxWidth: "61px",
     width: "100%",
+    gridArea: "3 / 2 / 4 / 3",
+    justifySelf: "end",
+    marginTop: "53px",
     [theme.breakpoints.up("lg")]: {
       alignSelf: "start",
       marginTop: "29px",
@@ -165,10 +203,17 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     }
   },
   sectionBusinessGallery__picture2: {
-    height: "100%",
+    objectFit: "cover",
+    alignSelf: "start",
+    height: "116px",
+    marginTop: "32px",
+    // maxWidth: "224px",
     width: "100%",
+    gridArea: "3 / 3 / 7 / 5",
+    justifySelf: "end",
     [theme.breakpoints.up("lg")]: {
       alignSelf: "start",
+      marginTop: "0px",
       maxWidth: "459px",
       gridArea: "1 / 5 / 2 / 7",
       gridColumnStart: 8,
@@ -177,10 +222,17 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     }
   },
   sectionBusinessGallery__picture3: {
-    height: "100%",
+    height: "155px",
     width: "100%",
+    gridArea: "4 / 2 / 5 / 5",
+    marginTop: "29px",
+    justifySelf: "start",
+    alignSelf: "start",
     [theme.breakpoints.up("lg")]: {
-      boxShadow: "0px 0px 15px 0px rgba(0, 0, 0, 0.07), 0px 25px 50px -12px rgba(0, 0, 0, 0.25)",
+      marginTop: "0px",
+      marginLeft: "0px",
+      boxShadow:
+        "0px 0px 15px 0px rgba(0, 0, 0, 0.07), 0px 25px 50px -12px rgba(0, 0, 0, 0.25)",
       height: "312px",
       maxWidth: "664px",
       gridArea: "2 / 4 / 3 / 7",
@@ -189,9 +241,12 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     }
   },
   sectionBusinessGallery__picture4: {
+    objectFit: "cover",
+    display: "none",
     height: "100%",
     width: "100%",
     [theme.breakpoints.up("lg")]: {
+      display: "block",
       alignSelf: "start",
       gridArea: "3 / 4 / 4 / 5",
       height: "210px",
@@ -200,9 +255,12 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     }
   },
   sectionBusinessGallery__picture5: {
+    objectFit: "cover",
+    display: "none",
     height: "100%",
     width: "100%",
     [theme.breakpoints.up("lg")]: {
+      display: "block",
       alignSelf: "start",
       gridArea: "3 / 5 / 4 / 7",
       maxWidth: "459px",
@@ -212,15 +270,24 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     }
   },
   sectionBusinessGallery__picture6: {
-    height: "100%",
+    objectFit: "cover",
+    alignSelf: "start",
+    height: "94px",
+    justifySelf: "end",
+    maxWidth: "61px",
     width: "100%",
+    gridArea: "4 / 1 / 5 / 2",
+    gridColumnStart: "2",
+    marginRight: "74px",
     [theme.breakpoints.up("lg")]: {
+      marginRight: "0px",
       alignSelf: "start",
       gridArea: "2 / 3 / 3 / 4",
       justifySelf: "end",
       gridRowStart: "2",
       gridRowEnd: "1",
       marginTop: "219px",
+      maxWidth: "initial",
       height: "210px",
       width: "135px"
     }
