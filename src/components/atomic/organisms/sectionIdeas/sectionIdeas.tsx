@@ -38,10 +38,12 @@ export function SectionIdeas() {
           <ImageBackground
             img="./img/sectionIdeas/Ellipses1.svg"
             sx={styles.sectionIdeas__icon1}
-          />
+            alt="icon ellipses1"
+            />
           <ImageBackground
             img="./img/sectionIdeas/Ellipses2.svg"
             sx={styles.sectionIdeas__icon2}
+            alt="icon ellipses2"
           />
         </Box>
       </Box>

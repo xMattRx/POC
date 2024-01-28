@@ -13,24 +13,28 @@ export function SectionBlocks() {
       img: './img/sectionTopics/attach.svg',
       description: 'Pellentesque quis tincidunt sit sed. Tortor massa sed habitant.',
       title: 'Fermentum amet',
+      alt: "clip icon"
     },
     {
       color: '#CFFAFE',
       img: './img/sectionTopics/pulse.svg',
       description: 'Quam sed neque vitae viverra purus venenatis ac non.',
       title: 'Dignissim quam',
+      alt: "electrocardiogram wave"
     },
     {
       color: '#DBEAFE',
       img: './img/sectionTopics/pie-chart.svg',
       description: 'Eget sed nunc, amet, nibh nulla. Morbi sed risus ullamcorper diam.',
       title: 'Dignissim quam',
+      alt: "pie chart"
     },
     {
       color: '#EDE9FE',
       img: './img/sectionTopics/aperture.svg',
       description: 'Euismod sed pellentesque ut elementum.',
       title: 'Risus morbi',
+      alt: "purple icon"
     },
   ];
 

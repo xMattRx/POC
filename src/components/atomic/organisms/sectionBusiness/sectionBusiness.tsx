@@ -33,11 +33,15 @@ export function SectionBusiness() {
             <Box
               component="img"
               src="./img/sectionBusiness/window-mobile.png"
+              alt="window with photo"
               sx={styles.sectionBusiness__unlimitedImage}
             />
           </Box>
           <Box sx={styles.sectionBusiness__unlimitedContent}>
-            <Topic color={theme.palette.grey[100]} sx={styles.sectionBusiness__unlimitedTopic}>
+            <Topic
+              color={theme.palette.grey[100]}
+              sx={styles.sectionBusiness__unlimitedTopic}
+            >
               No limits
             </Topic>
             <Title heading="h1" sx={styles.sectionBusiness__unlimitedTitle}>
