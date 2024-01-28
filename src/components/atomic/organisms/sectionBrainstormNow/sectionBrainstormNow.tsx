@@ -37,10 +37,12 @@ export function SectionBrainstormNow() {
         <ImageBackground
           sx={styles.sectionBrainstormNow__ellipses}
           img="./img/sectionBusinessGallery/Ellipses_Brainstorm.svg"
-        />
+          alt="Ellipses brainstorm"
+          />
         <ImageBackground
           sx={styles.sectionBrainstormNow__phones}
           img="./img/sectionBusinessGallery/Iphones.svg"
+          alt="Iphones"
         />
       </Box>
     </Box>
