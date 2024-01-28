@@ -207,7 +207,6 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     alignSelf: "start",
     height: "116px",
     marginTop: "32px",
-    // maxWidth: "224px",
     width: "100%",
     gridArea: "3 / 3 / 7 / 5",
     justifySelf: "end",
