@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react"
-import { SectionBusinessGallery } from "./sectionBusinessGallery"
+import { SectionBusinessGallery } from "./sectionBusinessGallery.tsx"
 
 const meta: Meta<typeof SectionBusinessGallery> = {
   title: "organisms/SectionBusinessGallery",
@@ -12,9 +12,15 @@ const meta: Meta<typeof SectionBusinessGallery> = {
 }
 export default meta
 
-export const Default: StoryObj<typeof SectionBusinessGallery> = {
+export const Variation1: StoryObj<typeof SectionBusinessGallery> = {
   render: () => {
-    return <SectionBusinessGallery  />
+    return <SectionBusinessGallery variation={1} />
+  }
+}
+
+export const Variation2: StoryObj<typeof SectionBusinessGallery> = {
+  render: () => {
+    return <SectionBusinessGallery variation={2}  />
   }
 }
 
