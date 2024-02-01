@@ -5,7 +5,7 @@ type MuiStyles = {
   [key: string]: SxProps
 }
 
-export const SectionBusinessGalleryStyles = (): MuiStyles => ({
+export const SectionBusinessGalleryStyles = (variation: number): MuiStyles => ({
   sectionBusinessGallery: {
     alignItems: "center",
     background: "#F1F5F9",
@@ -19,9 +19,9 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     },
     [theme.breakpoints.up("lg")]: {
       height: "1193px"
-    },
-  
+    }
   },
+
   sectionBusinessGallery__content: {
     alignItems: "center",
     flexDirection: "column",
@@ -34,16 +34,23 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     gap: "14px",
     [theme.breakpoints.up("lg")]: {
       paddingTop: "80px",
-      paddingLeft: "80px",
-      paddingRight: "80px",
+      paddingLeft: variation === 1 ? "80px" : "0px",
+      paddingRight: variation === 1 ? "80px" : "0px",
       display: "grid",
       gap: "30.03px",
-      gridTemplateColumns: "repeat(7, 1fr)",
-      gridTemplateRows: "240px repeat(2, 1fr)"
+      gridTemplateColumns:
+        variation === 1 ? "repeat(7, 1fr)" : "repeat(6, 1fr)",
+      gridTemplateRows:
+        variation === 1 ? "240px repeat(2, 1fr)" : "375px repeat(5, 1fr)"
     },
     [theme.breakpoints.up("md")]: {
       paddingTop: "80px",
       paddingRight: "0px"
+    },
+    "& > img": {
+      borderRadius: "5px",
+      boxShadow:
+        "0px 0px 4px 0px rgba(0, 0, 0, 0.07), 0px 4px 6px -1px rgba(0, 0, 0, 0.10)"
     }
   },
 
@@ -52,15 +59,18 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     alignSelf: "baseline",
     justifySelf: "center",
     [theme.breakpoints.up("lg")]: {
+      
       justifySelf: "start",
       display: "block",
       alignSelf: "start",
-      gridArea: "1 / 1 / 2 / 4",
+      gridArea: variation === 1 ? "1 / 1 / 2 / 4" : "1 / 3 / 3 / 5",
       width: "460px"
     }
   },
+
   sectionBusinessGallery__cta: {
     display: "flex",
+    justifyContent: "center",
     flexDirection: "column",
     alignItems: "center",
     gridArea: "2 / 1 / 4 / 5",
@@ -68,15 +78,19 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     gridRowEnd: 0,
     marginTop: "40px",
     [theme.breakpoints.up("lg")]: {
-      display: "block",
-      gridArea: "2 / 1 / 3 / 3",
+      alignSelf: "center",
+      justifyContent: variation === 1 ? "initial" : "flex-start",
+      display: variation === 1 ? "block" : "flex",
+      gridArea: variation === 1 ? "2 / 1 / 3 / 3" : "3 / 3 / 4 / 5",
       marginTop: "360px",
-      gridColumnEnd: 4,
+      gridColumnStart: 3,
+      gridColumnEnd: 5,
       gridRowStart: 2,
       gridRowEnd: 1,
       height: "100%"
     }
   },
+
   sectionBusinessGallery__topic: {
     color: theme.palette.grey[100],
     fontSize: "20px",
@@ -88,9 +102,10 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     textAlign: "center",
     [theme.breakpoints.up("lg")]: {
       fontSize: "18px",
-      textAlign: "left"
+      textAlign: "center"
     }
   },
+
   sectionBusinessGallery__title: {
     color: theme.palette.brand[200],
     fontSize: "32px",
@@ -105,7 +120,7 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
       fontWeight: 800,
       lineHeight: "110%",
       maxWidth: "460px",
-      textAlign: "left"
+      textAlign: "center"
     }
   },
   sectionBusinessGallery__description: {
@@ -116,12 +131,13 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     marginBottom: "32px",
     textAlign: "center",
     [theme.breakpoints.up("lg")]: {
-      textAlign: "left",
+      textAlign: "center",
       gridArea: "2 / 1 / 3 / 3",
+      maxWidth: "initial",
+      gridColumnEnd: "4",
       fontSize: "18px",
       lineHeight: "160%",
       marginBottom: "32px",
-      maxWidth: "470px"
     }
   },
   sectionBusinessGallery__button: {
@@ -137,19 +153,13 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     textTransform: "initial",
     [theme.breakpoints.up("lg")]: {
       marginBottom: "82px",
-      gridArea: "2 / 1 / 3 / 3"
+      // gridArea: variation === 1 ? "2 / 1 / 3 / 3" : "3 / 3 / 4 / 5",
     },
 
     "&:hover": {
       background: theme.palette.brand["50"],
       opacity: 1
     }
-  },
-
-  "& > img": {
-    borderRadius: "5px",
-    boxShadow:
-      "0px 0px 4px 0px rgba(0, 0, 0, 0.07), 0px 4px 6px -1px rgba(0, 0, 0, 0.10)"
   },
 
   sectionBusinessGallery__picture7: {
@@ -160,7 +170,7 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     gridArea: "4 / 1 / 6 / 1",
     marginTop: "106px",
     [theme.breakpoints.up("lg")]: {
-      gridArea: "3 / 2 / 4 / 4",
+      gridArea: variation === 1 ? "3 / 2 / 4 / 4" : "4 / 3 / 6 / 5",
       justifySelf: "end",
       gridRowStart: "4",
       gridRowEnd: "1",
@@ -178,7 +188,7 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     [theme.breakpoints.up("lg")]: {
       display: "block",
       alignSelf: "start",
-      gridArea: "3 / 1 / 4 / 2",
+      gridArea: variation === 1 ? "3 / 1 / 4 / 2" : "4 / 2 / 5 / 3",
       maxWidth: "135px",
       marginTop: "-110px",
       height: "210px"
@@ -195,6 +205,7 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     justifySelf: "end",
     marginTop: "53px",
     [theme.breakpoints.up("lg")]: {
+      display: "none",
       alignSelf: "start",
       marginTop: "29px",
       height: "210px",
@@ -214,13 +225,14 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
       alignSelf: "start",
       marginTop: "0px",
       maxWidth: "459px",
-      gridArea: "1 / 5 / 2 / 7",
+      gridArea: variation === 1 ? "1 / 5 / 2 / 7" : "3 / 2 / 4 / 3",
       gridColumnStart: 8,
       gridColumnEnd: 5,
       height: "240px"
     }
   },
   sectionBusinessGallery__picture3: {
+    objectFit: "cover",
     height: "155px",
     width: "100%",
     gridArea: "4 / 2 / 5 / 5",
@@ -234,7 +246,7 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
         "0px 0px 15px 0px rgba(0, 0, 0, 0.07), 0px 25px 50px -12px rgba(0, 0, 0, 0.25)",
       height: "312px",
       maxWidth: "664px",
-      gridArea: "2 / 4 / 3 / 7",
+      gridArea: variation === 1 ? "2 / 4 / 3 / 7" : "3 / 5 / 5 / 7",
       gridColumnStart: "4",
       gridColumnEnd: "8"
     }
@@ -247,7 +259,7 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     [theme.breakpoints.up("lg")]: {
       display: "block",
       alignSelf: "start",
-      gridArea: "3 / 4 / 4 / 5",
+      gridArea: variation === 1 ? "3 / 4 / 4 / 5" : "5 / 5 / 6 / 6",
       height: "210px",
       objectFit: "cover",
       maxWidth: "135px"
@@ -261,11 +273,12 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     [theme.breakpoints.up("lg")]: {
       display: "block",
       alignSelf: "start",
-      gridArea: "3 / 5 / 4 / 7",
-      maxWidth: "459px",
-      height: "240px",
-      gridColumnStart: "5",
-      gridColumnEnd: "8"
+      gridArea: variation === 1 ? "3 / 5 / 4 / 7" : "2 / 1 / 3 / 2",
+      maxWidth: variation === 1 ? "459px" : "282px",
+      height: variation === 1 ? "240px" : "134px",
+      marginTop: variation === 2 && "152px",
+      gridColumnStart: variation === 1 ? "5" : "",
+      gridColumnEnd: variation === 1 ? "8" : "4",
     }
   },
   sectionBusinessGallery__picture6: {
@@ -280,12 +293,12 @@ export const SectionBusinessGalleryStyles = (): MuiStyles => ({
     marginRight: "74px",
     [theme.breakpoints.up("lg")]: {
       marginRight: "0px",
-      alignSelf: "start",
-      gridArea: "2 / 3 / 3 / 4",
-      justifySelf: "end",
+      alignSelf: variation === 1 ? "start" : "start",
+      gridArea: variation === 1 ? "2 / 3 / 3 / 4" : "3 / 1 / 5 / 2",
+      justifySelf: variation === 1 ? "end" : "start",
       gridRowStart: "2",
       gridRowEnd: "1",
-      marginTop: "219px",
+      marginTop: variation === 1 ? "219px" : "309px",
       maxWidth: "initial",
       height: "210px",
       width: "135px"

@@ -70,7 +70,7 @@ export default function Home() {
         ]}
       />
       <SectionBusiness />
-      <SectionBusinessGallery />
+      <SectionBusinessGallery variation={1} />
       <Footer />
     </>
   )
