@@ -39,33 +39,27 @@ export default function Home() {
           },
 
           {
-            img: "url('./img/sectionSimilar/woman.png')",
-            topic: "Artist & investor",
-            description: `Enim sagittis, sit porttitor morbi lobortis amet, libero
-          adipiscing auctor. Malesuada tristique libero, id netus tincidunt.
-          Egestas ac arcu amet nisl quis est ...`
+            img: "url('./img/sectionSimilar/flower.jpg')",
+            topic: "Nature",
+            description: `Sagittis enim, sit amet porttitor, morbi lobortis amet, libero adipiscing auctor. Malesuada tristique libero, id netus tincidunt. Egestas ac arcu amet nisl quis est...`
           },
 
           {
-            img: "url('./img/sectionSimilar/woman.png')",
-            topic: "Artist & investor",
+            img: "url('./img/sectionSimilar/beach.jpg')",
+            topic: "Beach",
             description: `Enim sagittis, sit porttitor morbi lobortis amet, libero
           adipiscing auctor. Malesuada tristique libero, id netus tincidunt.
           Egestas ac arcu amet nisl quis est ...`
           },
           {
-            img: "url('./img/sectionSimilar/woman.png')",
-            topic: "Artist & investor",
-            description: `Enim sagittis, sit porttitor morbi lobortis amet, libero
-          adipiscing auctor. Malesuada tristique libero, id netus tincidunt.
-          Egestas ac arcu amet nisl quis est ...`
+            img: "url('./img/sectionSimilar/mountains.avif')",
+            topic: "Mountains",
+            description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada libero ut ipsum vestibulum, vitae fermentum urna ultricies. Fusce commodo purus id nisi tempor, nec ...`
           },
           {
-            img: "url('./img/sectionSimilar/woman.png')",
-            topic: "Artist & investor",
-            description: `Enim sagittis, sit porttitor morbi lobortis amet, libero
-          adipiscing auctor. Malesuada tristique libero, id netus tincidunt.
-          Egestas ac arcu amet nisl quis est ...`
+            img: "url('./img/sectionSimilar/clock.avif')",
+            topic: "Time",
+            description: `Mauris blandit felis a libero convallis, vel lobortis nisi condimentum. Nulla facilisi. Vivamus nec justo quis leo venenatis congue. Pellentesque habitant morbi tristique s.`
           }
         ]}
       />
