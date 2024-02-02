@@ -5,7 +5,6 @@ import {
   IconBrandLinkedin,
   IconBrandTwitterFilled,
   IconBrandYoutubeFilled,
-  X,
 } from "@tabler/icons-react"
 import Link from "next/link"
 import { theme } from "../../../../libs/theme"
