@@ -1,14 +1,14 @@
 import { Box, Typography } from "@mui/material"
-import Link from "next/link"
-import { theme } from "../../../../libs/theme"
-import { FooterStyles } from "./footer.styles"
 import {
   IconBrandFacebookFilled,
   IconBrandInstagram,
   IconBrandLinkedin,
   IconBrandTwitterFilled,
-  IconBrandYoutubeFilled
+  IconBrandYoutubeFilled,
 } from "@tabler/icons-react"
+import Link from "next/link"
+import { theme } from "../../../../libs/theme"
+import { FooterStyles } from "./footer.styles"
 
 const socialLinks = [
   {

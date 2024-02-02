@@ -1,16 +1,32 @@
 import { Box } from "@mui/material"
 import Link from "next/link"
-import React from "react"
+import { useEffect, useState } from "react"
 import { Button } from "../../atoms/button/button.tsx"
 import { Logo } from "../../atoms/logo/logo"
 import { NavItem } from "../../atoms/navItem/navItem.tsx"
 import { NavbarStyles } from "./navbar.styles"
 import { NavbarProps } from "./navbar.ts"
 
-
-
 export function Navbar({ menuItems }: NavbarProps) {
-  const styles = NavbarStyles()
+  const [handleMenu, setHandleMenu] = useState(false)
+  const styles = NavbarStyles(handleMenu)
+
+  const actionMenu = () => {
+    if (handleMenu) {
+      document.body.style.overflowY = "auto"
+    } else {
+      document.body.style.overflowY = "hidden"
+    }
+  }
+
+  const actionMenuHamburguer = () => {
+    setHandleMenu(!handleMenu)
+    actionMenu()
+  }
+
+  useEffect(() => {
+    actionMenu()
+  }, [])
 
   return (
     <Box sx={styles.Navbar} component="header">
@@ -20,6 +36,7 @@ export function Navbar({ menuItems }: NavbarProps) {
           <Box
             sx={styles.Navbar__menuHamburguer}
             component="img"
+            onClick={actionMenuHamburguer}
             src="./img/navbar/menu-outline.svg"
             alt="Menu icon"
           />
@@ -32,11 +49,7 @@ export function Navbar({ menuItems }: NavbarProps) {
           </Box>
           <Box sx={styles.Navbar__actions}>
             <Link href="#">Log in</Link>
-            <Button
-              sx={styles.Navbar__button}
-            >
-              Start For Free
-            </Button>
+            <Button sx={styles.Navbar__button}>Start For Free</Button>
           </Box>
         </Box>
       </Box>
