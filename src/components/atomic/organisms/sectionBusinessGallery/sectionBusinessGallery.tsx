@@ -8,7 +8,7 @@ import { SectionBusinessGalleryStyles } from "./sectionBusinessGallery.styles"
 import { sectionBusinessGalleryProps } from "./sectionBusinessGallery.ts"
 
 export function SectionBusinessGallery({variation}: sectionBusinessGalleryProps) {
-  const styles = SectionBusinessGalleryStyles(variation)
+  const styles = SectionBusinessGalleryStyles()
 
   return (
     <>
