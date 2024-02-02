@@ -1,4 +1,7 @@
 import { Box, Typography } from "@mui/material"
+import Link from "next/link"
+import { theme } from "../../../../libs/theme"
+import { FooterStyles } from "./footer.styles"
 import {
   IconBrandFacebookFilled,
   IconBrandInstagram,
@@ -6,9 +9,6 @@ import {
   IconBrandTwitterFilled,
   IconBrandYoutubeFilled
 } from "@tabler/icons-react"
-import Link from "next/link"
-import { theme } from "../../../../libs/theme"
-import { FooterStyles } from "./footer.styles"
 
 const socialLinks = [
   {
@@ -43,35 +43,70 @@ const footerColumns = [
   {
     title: "categories",
     items: [
-      "User Interface",
-      "User Experience",
-      "Digital Media",
-      "Lifestyle",
-      "Programming",
-      "Animation"
+      {
+        label: "User Interface",
+        href: "/posts/user-interface"
+      },
+      {
+        label: "User Experience",
+        href: "/posts/user-experience"
+      },
+      {
+        label: "Digital Media",
+        href: "/posts/digital-media"
+      },
+      { label: "Lifestyle", href: "/posts/lifestyle" },
+      { label: "Programming", href: "/posts/programming" },
+      { label: "Animation", href: "/posts/animation" }
     ]
   },
   {
     title: "product",
-    items: ["Pricing", "Overview", "Browse", "Accesibility", "Five"]
+    items: [
+      { label: "Pricing", href: "/pricing" },
+      { label: "Overview", href: "/overview" },
+      { label: "Browse", href: "/browse" },
+      { label: "Accessibility", href: "/accessibility" },
+      { label: "Five", href: "/five" }
+    ]
   },
   {
     title: "solutions",
-    items: ["Brainstorming", "Ideation", "Wireframing", "Research"]
+    items: [
+      { label: "Brainstorming", href: "/brainstorming" },
+      { label: "Ideation", href: "/ideation" },
+      { label: "Wireframing", href: "/wireframing" },
+      { label: "Research", href: "/research" }
+    ]
   },
-  { title: "resources", items: ["Help Center", "Blog", "Tutorials"] },
+  {
+    title: "resources",
+    items: [
+      { label: "Help Center", href: "/help-center" },
+      { label: "Blog", href: "/blog" },
+      { label: "Tutorials", href: "/tutorials" }
+    ]
+  },
   {
     title: "support",
     items: [
-      "Contact Us",
-      "Developers",
-      "Documentation",
-      "Integrations",
-      "Reports",
-      "Webinar"
+      { label: "Contact Us", href: "/contact-us" },
+      { label: "Developers", href: "/developers" },
+      { label: "Documentation", href: "/documentation" },
+      { label: "Integrations", href: "/integrations" },
+      { label: "Reports", href: "/reports" },
+      { label: "Webinar", href: "/webinar" }
     ]
   },
-  { title: "company", items: ["About", "Press", "Events", "Careers"] }
+  {
+    title: "company",
+    items: [
+      { label: "About", href: "/about" },
+      { label: "Press", href: "/press" },
+      { label: "Events", href: "/events" },
+      { label: "Careers", href: "/careers" }
+    ]
+  }
 ]
 
 const footerLinks = [
@@ -79,6 +114,11 @@ const footerLinks = [
   { label: "Privacy", href: "#" },
   { label: "Contact", href: "#" }
 ]
+
+const isExternalLink = (url: string) => {
+  const regex = /^(https?:)?\/\//
+  return regex.test(url)
+}
 
 export function Footer() {
   const styles = FooterStyles()
@@ -92,7 +132,18 @@ export function Footer() {
               <Typography sx={styles.footer__title}>{column.title}</Typography>
               {column.items.map((item, index) => (
                 <Typography key={index} sx={styles.footer__item}>
-                  <Link href="#">{item}</Link>
+                  {isExternalLink(item.href) ? (
+                    <Box
+                      component="a"
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {item.label}
+                    </Box>
+                  ) : (
+                    <Link href={item.href}>{item.label}</Link>
+                  )}
                 </Typography>
               ))}
             </Box>
@@ -106,14 +157,34 @@ export function Footer() {
             <Box sx={styles.footer__socialLinks}>
               {socialLinks.map((socialLink, socialLinkIndex) => (
                 <Typography key={socialLinkIndex} sx={styles.footer__social}>
-                  <Link href={socialLink.href}>{socialLink.icon}</Link>
+                  {isExternalLink(socialLink.href) ? (
+                    <Link
+                      href={socialLink.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {socialLink.icon}
+                    </Link>
+                  ) : (
+                    <Link href={socialLink.href}>{socialLink.icon}</Link>
+                  )}
                 </Typography>
               ))}
             </Box>
             <Box sx={styles.footer__links}>
               {footerLinks.map((link, index) => (
                 <Typography key={index} sx={styles.footer__link}>
-                  <Link href={link.href}>{link.label}</Link>
+                  {isExternalLink(link.href) ? (
+                    <Link
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <Link href={link.href}>{link.label}</Link>
+                  )}
                 </Typography>
               ))}
             </Box>

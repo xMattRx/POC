@@ -26,11 +26,13 @@ export const FooterStyles = (): MuiStyles => ({
     borderBottom: `1px solid ${theme.palette.grey[200]}`,
     display: "flex",
     flexDirection: "column",
+    flexWrap: "wrap",
     gap: "32px",
     justifyContent: "center",
     padding: "48px 0px",
     width: "100%",
     [theme.breakpoints.up("md")]: {
+      flexWrap: "wrap",
       flexDirection: "row",
       gap: "48px",
     }
