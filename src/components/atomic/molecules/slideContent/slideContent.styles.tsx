@@ -17,15 +17,14 @@ export const SlideContentStyles = (): MuiStyles => ({
     display: "flex",
     flexDirection: "column",
     padding: "24px 16px 12px 16px",
-    position: "absolute",
     left: "17px",
     top: "209px",
     width: "327px",
     [theme.breakpoints.up("md")]: {
       top: "50%",
-      transform: "translateY(-50%)",
       left: "600px",
       maxWidth: "680px",
+      height: "294px",
       padding: "48px 48px 24px 48px",
       width: "100%"
     },

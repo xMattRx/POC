@@ -7,6 +7,7 @@ type MuiStyles = {
 
 export const SlideStyles = (): MuiStyles => ({
   slide: {
+    alignItems: "center",
     display: "flex",
     justifyContent: "center",
     height: "532px",
@@ -22,15 +23,17 @@ export const SlideStyles = (): MuiStyles => ({
     maxWidth: "361px",
     width: "100%",
     [theme.breakpoints.up("md")]: {
+      alignItems: "center",
       maxWidth: "1280px",
       justifyContent: "flex-start"
     }
   },
   slide__image: {
+    alignItems: "center",
     borderRadius: "5px",
     backgroundSize: "cover",
+    display: "flex",
     height: "241px",
-    position: "relative",
     width: "361px",
     [theme.breakpoints.up("md")]: {
       height: "412px",
@@ -50,14 +53,10 @@ export const SlideStyles = (): MuiStyles => ({
     flexDirection: "column",
     padding: "24px 16px 12px 16px",
     position: "absolute",
-    left: "17px",
-    top: "209px",
     width: "327px",
     [theme.breakpoints.up("md")]: {
-      top: "50%",
-      transform: "translateY(-50%)",
-      left: "600px",
       maxWidth: "680px",
+      
       padding: "48px 48px 24px 48px",
       width: "100%"
     },
@@ -67,7 +66,6 @@ export const SlideStyles = (): MuiStyles => ({
     },
   },
   slide__topic: {
-    
     fontSize: "20px",
     fontWeight: 700,
     lineHeight: "100%",

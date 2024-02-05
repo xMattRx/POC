@@ -12,7 +12,7 @@ export const FooterStyles = (): MuiStyles => ({
     width: "100%"
   },
   footer__content: {
-    display: "flex",
+    display: "grid",
     flexDirection: "column",
     justifyContent: "center",
     padding: "0 16px",
@@ -24,7 +24,9 @@ export const FooterStyles = (): MuiStyles => ({
   },
   footer__columns: {
     borderBottom: `1px solid ${theme.palette.grey[200]}`,
-    display: "flex",
+    display: "grid",
+    gridTemplateColumns: "repeat(1, 1fr)",
+    justifyItems: "center",
     flexDirection: "column",
     flexWrap: "wrap",
     gap: "32px",
@@ -32,9 +34,12 @@ export const FooterStyles = (): MuiStyles => ({
     padding: "48px 0px",
     width: "100%",
     [theme.breakpoints.up("md")]: {
-      flexWrap: "wrap",
-      flexDirection: "row",
-      gap: "48px",
+      gridTemplateColumns: "repeat(3, 1fr)",
+      gap: "48px"
+    },
+    [theme.breakpoints.up("lg")]: {
+      gridTemplateColumns: "repeat(6, 1fr)",
+      gap: "48px"
     }
   },
   footer__column: {
@@ -73,9 +78,15 @@ export const FooterStyles = (): MuiStyles => ({
     padding: "24px 0px",
     width: "100%",
     [theme.breakpoints.up("md")]: {
+      flexDirection: "column-reverse",
+      alignItems: "center",
+      justifyContent: "center",
+     
+    },
+    [theme.breakpoints.up("lg")]: {
       justifyContent: "space-between",
       padding: "36px 0px",
-      flexDirection: "row",
+      flexDirection: "row"
     }
   },
   footer__rights: {
@@ -85,10 +96,10 @@ export const FooterStyles = (): MuiStyles => ({
     justifyContent: "center",
     width: "100%",
     [theme.breakpoints.up("md")]: {
-      alignItems: "flex-start",
+      alignItems: "center",
       color: theme.palette.brand["100"],
       fontSize: "16px",
-      lineHeight: "140%",
+      lineHeight: "140%"
     }
   },
   footer__linksAndIcons: {
@@ -125,7 +136,7 @@ export const FooterStyles = (): MuiStyles => ({
     height: "24px",
     gap: "24px",
     [theme.breakpoints.up("md")]: {
-      gap: "16px",
+      gap: "16px"
     }
   },
   footer__social: {
@@ -133,9 +144,9 @@ export const FooterStyles = (): MuiStyles => ({
       lineHeight: "140%",
       fontSize: "16px",
       textDecoration: "none",
-      "& > svg":{
+      "& > svg": {
         color: theme.palette.grey["100"],
-        stroke: theme.palette.grey["100"],
+        stroke: theme.palette.grey["100"]
       }
     }
   },
@@ -166,5 +177,5 @@ export const FooterStyles = (): MuiStyles => ({
       lineHeight: "140%",
       textDecoration: "none"
     }
-  },
+  }
 })

@@ -15,7 +15,7 @@ MuiStyles => ({
     fontSize: "24px",
     letterSpacing: "0.5px",
     padding: "12px 8px",
-    [theme.breakpoints.up(769)]: {
+    [theme.breakpoints.up(1024)]: {
       fontSize: "16px",
       padding: "12px 8px",
 

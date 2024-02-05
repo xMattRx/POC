@@ -1,7 +1,9 @@
 /* eslint-disable prefer-const */
 import { Box } from "@mui/material"
+import { IconX } from "@tabler/icons-react"
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import { theme } from "../../../../libs/theme"
 import { Button } from "../../atoms/button/button.tsx"
 import { Logo } from "../../atoms/logo/logo"
 import { NavItem } from "../../atoms/navItem/navItem.tsx"
@@ -14,9 +16,9 @@ export function Navbar({ menuItems }: NavbarProps) {
 
   const actionMenu = (value: boolean) => {
     if (value) {
-      document.body.classList.add("close")
+      document.body.classList.add("open")
     } else {
-      document.body.classList.remove("close")
+      document.body.classList.remove("open")
     }
   }
 
@@ -35,13 +37,17 @@ export function Navbar({ menuItems }: NavbarProps) {
       <Box sx={styles.Navbar__content}>
         <Logo />
         <>
-          <Box
-            sx={styles.Navbar__menuHamburguer}
-            component="img"
-            onClick={actionMenuHamburguer}
-            src="./img/navbar/menu-outline.svg"
-            alt="Menu icon"
-          />
+          {handleMenu ? (
+            <IconX size={24} onClick={actionMenuHamburguer} style={{zIndex:999}} color={theme.palette.brand["100"]} />
+          ) : (
+            <Box
+              sx={styles.Navbar__menuHamburguer}
+              component="img"
+              onClick={actionMenuHamburguer}
+              src="./img/navbar/menu-outline.svg"
+              alt="Menu icon"
+            />
+          )}
         </>
         <Box sx={styles.Navbar__menu} component="nav">
           <Box sx={styles.Navbar__navList} component="ul">
