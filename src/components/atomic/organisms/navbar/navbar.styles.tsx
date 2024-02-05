@@ -19,7 +19,7 @@ export const NavbarStyles = (handleMenu:boolean): MuiStyles => ({
     padding: "16px",
     position: "relative",
     width: "100%",
-    [theme.breakpoints.up(769)]: {
+    [theme.breakpoints.up(1024)]: {
       alignItems: "center",
       flexDirection: "row",
       justifyContent: "flex-start",
@@ -31,7 +31,7 @@ export const NavbarStyles = (handleMenu:boolean): MuiStyles => ({
     cursor: "pointer",
     display: "flex",
     zIndex: 9999,
-    [theme.breakpoints.up(769)]: {
+    [theme.breakpoints.up(1024)]: {
       display: "none"
     }
   },
@@ -52,7 +52,7 @@ export const NavbarStyles = (handleMenu:boolean): MuiStyles => ({
     width: "50vw",
     transition: "transform 0.3s ease",
     zIndex:99,
-    [theme.breakpoints.up(769)]: {
+    [theme.breakpoints.up(1024)]: {
       borderRadius: "0px",
       boxShadow: "none", 
       background: "transparent",
@@ -75,7 +75,7 @@ export const NavbarStyles = (handleMenu:boolean): MuiStyles => ({
     marginTop: "60px",
     gap: "10px",
     padding: "0",
-    [theme.breakpoints.up(769)]: {
+    [theme.breakpoints.up(1024)]: {
       marginTop: "0px",
       alignItems: "center",
       flexDirection: "row",
@@ -119,7 +119,7 @@ export const NavbarStyles = (handleMenu:boolean): MuiStyles => ({
     width: "max-content",
     fontSize: "12px",
     padding: "10px 12px",
-    [theme.breakpoints.up(769)]: {
+    [theme.breakpoints.up(1024)]: {
       padding: "12px 28px",
       fontSize: "14px",
     },

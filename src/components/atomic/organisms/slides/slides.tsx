@@ -22,10 +22,10 @@ export default function Slides({ slides }: SectionSimilarProps) {
   return (
     <Box sx={styles.slides}>
       <Swiper
-        spaceBetween={30}
+        spaceBetween={100}
         centeredSlides={true}
         autoplay={{
-          delay: 3000
+          delay: 2000000
         }}
         pagination={pagination}
         modules={[Pagination, Autoplay]}
