@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 import { Box } from "@mui/material"
 import Link from "next/link"
 import { useEffect, useState } from "react"
@@ -11,8 +12,8 @@ export function Navbar({ menuItems }: NavbarProps) {
   const [handleMenu, setHandleMenu] = useState(false)
   const styles = NavbarStyles(handleMenu)
 
-  const actionMenu = () => {
-    if (handleMenu) {
+  const actionMenu = (value: boolean) => {
+    if (value) {
       document.body.classList.add("close")
     } else {
       document.body.classList.remove("close")
@@ -20,12 +21,13 @@ export function Navbar({ menuItems }: NavbarProps) {
   }
 
   const actionMenuHamburguer = () => {
-    setHandleMenu(!handleMenu)
-    actionMenu()
+    let value = !handleMenu
+    setHandleMenu(value)
+    actionMenu(value)
   }
 
   useEffect(() => {
-    actionMenu()
+    actionMenu(handleMenu)
   }, [])
 
   return (
