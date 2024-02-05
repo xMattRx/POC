@@ -13,9 +13,9 @@ export function Navbar({ menuItems }: NavbarProps) {
 
   const actionMenu = () => {
     if (handleMenu) {
-      document.body.style.overflowY = "auto"
+      document.body.classList.add("open")
     } else {
-      document.body.style.overflowY = "hidden"
+      document.body.classList.remove("open")
     }
   }
 
