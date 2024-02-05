@@ -13,9 +13,9 @@ export function Navbar({ menuItems }: NavbarProps) {
 
   const actionMenu = () => {
     if (handleMenu) {
-      document.body.classList.add("open")
+      document.body.classList.add("close")
     } else {
-      document.body.classList.remove("open")
+      document.body.classList.remove("close")
     }
   }
 
