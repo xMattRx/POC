@@ -4,7 +4,7 @@ import {
   IconBrandInstagram,
   IconBrandLinkedin,
   IconBrandTwitterFilled,
-  IconBrandYoutubeFilled,
+  IconBrandYoutubeFilled
 } from "@tabler/icons-react"
 import Link from "next/link"
 import { theme } from "../../../../libs/theme"
@@ -45,7 +45,7 @@ const footerColumns = [
     items: [
       {
         label: "User Interface",
-        href: "/posts/user-interface"
+        href: "http://google.com"
       },
       {
         label: "User Experience",
@@ -158,13 +158,14 @@ export function Footer() {
               {socialLinks.map((socialLink, socialLinkIndex) => (
                 <Typography key={socialLinkIndex} sx={styles.footer__social}>
                   {isExternalLink(socialLink.href) ? (
-                    <Link
+                    <Box
                       href={socialLink.href}
+                      component="a"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       {socialLink.icon}
-                    </Link>
+                    </Box>
                   ) : (
                     <Link href={socialLink.href}>{socialLink.icon}</Link>
                   )}
@@ -175,13 +176,14 @@ export function Footer() {
               {footerLinks.map((link, index) => (
                 <Typography key={index} sx={styles.footer__link}>
                   {isExternalLink(link.href) ? (
-                    <Link
+                    <Box
                       href={link.href}
                       target="_blank"
+                      component="a"
                       rel="noopener noreferrer"
                     >
                       {link.label}
-                    </Link>
+                    </Box>
                   ) : (
                     <Link href={link.href}>{link.label}</Link>
                   )}
