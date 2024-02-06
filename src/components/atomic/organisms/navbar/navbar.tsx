@@ -2,7 +2,7 @@
 import { Box } from "@mui/material"
 import { IconX } from "@tabler/icons-react"
 import Link from "next/link"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { theme } from "../../../../libs/theme"
 import { Button } from "../../atoms/button/button.tsx"
 import { Logo } from "../../atoms/logo/logo"
@@ -14,23 +14,10 @@ export function Navbar({ menuItems }: NavbarProps) {
   const [handleMenu, setHandleMenu] = useState(false)
   const styles = NavbarStyles(handleMenu)
 
-  const actionMenu = (value: boolean) => {
-    if (value) {
-      document.body.classList.add("open")
-    } else {
-      document.body.classList.remove("open")
-    }
-  }
-
   const actionMenuHamburguer = () => {
     let value = !handleMenu
     setHandleMenu(value)
-    actionMenu(value)
   }
-
-  useEffect(() => {
-    actionMenu(handleMenu)
-  }, [])
 
   return (
     <Box sx={styles.Navbar} component="header">
@@ -49,7 +36,7 @@ export function Navbar({ menuItems }: NavbarProps) {
             />
           )}
         </>
-        <Box sx={styles.Navbar__menu} component="nav">
+        <Box className={handleMenu ? 'open' : ''} sx={styles.Navbar__menu} component="nav">
           <Box sx={styles.Navbar__navList} component="ul">
             {menuItems.map((item, index) => (
               <NavItem key={index} label={item.label} link={item.link} />

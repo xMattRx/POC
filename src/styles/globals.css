@@ -75,6 +75,6 @@
   .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
   }
 
-  .open{
+  body:has(.open){
     overflow-y: hidden;
   }
